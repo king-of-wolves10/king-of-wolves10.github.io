@@ -1,0 +1,336 @@
+<link rel="stylesheet" href="generic.css">
+<link rel="stylesheet" href="videoplayer.css">
+<link rel="icon" href="../favicon.ico">
+
+  <header>
+    <h1 id="Welcome">King of Wolves website! </h1><br>
+    <nav><a href="../index.html">Home</a> </nav>
+    <title>Videos - king_of_wolves10</title>
+  </header>
+<body>
+
+<div id="wrapper" style="min-height: calc(100vh - 100px);">
+<article>
+Content is for users 13+, that's a guideline, not a rule.
+<div id="feed"><a href="?" >Exit video</a></div>
+
+<div class="container">
+	<video id="video"></video>
+	<p id="subTxt"></p>
+
+	<div class="controls">
+	    <div style=" display: flex; justify-content: space-between;">
+		<span id="pos" >00:00</span>
+		<span id="len" >00:00</span>
+	    </div>
+	            <div class="timeline">
+	                <div class="bar">
+	                    <div class="inner"></div>
+        	        </div>
+			
+        	    </div>
+	
+		<button title="Restart Video" onclick="reset(event)" class="hudbutton" id="kw_reset"></button>
+		<button title="Download Video" onclick="download(event)" class="hudbutton" id="kw_keep"></button>
+	        <button title="Fast Rewind" onclick="fastrewind(event)" class="hudbutton" id="kw_fbackward"></button>
+		<button title="Rewind" onclick="rewind(event)" class="hudbutton" id="kw_backward"></button>    
+		<button title="Pause/Play" onclick="play(event)" class="hudbutton" id="kw_play"></button>
+	        <button title="Forward" onclick="forward(event)" class="hudbutton" id="kw_forward"></button>  
+	  	<button title="Fast Forward" onclick="fastforward(event)" class="hudbutton" id="kw_fforward"></button> 
+		<button title="Closed Captions" onclick="captions(event)" class="hudbutton" id="kw_captions"></button>
+		<button title="Full Screen" onclick="fullScreen(event)" class="hudbutton" id="kw_fullscreen" ></button>
+	
+       		</div>
+
+	</div>
+
+<div id="VideoInf" style="background-color:#ffffffa1; color:black; display:none; width: 50%; padding:10;">
+<h1 id="name">Title</h1>
+<div id="desc" style="width:100%; height:200px; overflow-y:scroll">Description</div>
+</div>
+</article>
+</div>
+
+<div id="footer">
+<span>Contact me, via: </span><a href="https://www.neopets.com/neomessages.phtml?type=send&amp;recipient=king_of_wolves10">Neomail</a>
+
+</div>
+
+<script src="../botprevention.js"></script>
+</body>
+<script>
+
+//OVER HERE!!! LIST OF VIDEOS
+var listofvideos = ["Mahjong","HALO"]
+//OVER HEEEEEERE!!! ctrl+f tags: videolist video list where is it lost im lost i cant see i can't see 
+
+
+//#    #####  #### #####      ####   #####    #   # ##### ####  #####  ####   ####
+//#      #   #       #       #    #  #        #   #   #   #   # #     #    # #
+//#      #    ###    #       #    #  ###       # #    #   #   # ###   #    #  ###
+//#      #       #   #       #    #  #         # #    #   #   # #     #    #     #
+//#### ##### ####    #        ####   #          #   ##### ####  #####  ####  ####
+// BE SURE TO TYPE FILENAMES, NOT THE TITLES, AND DONT FORGET TO ADD THUMBNAILS
+
+var cc = false;
+var ccID = 0;
+var fs = false;
+var watching = new URLSearchParams( window.location.search ).get("video");
+
+
+if(watching == undefined){document.querySelector('.container').innerHTML = ""; 
+var feed = document.querySelector('#feed');
+feed.innerHTML = `What would you like to watch?<br> `
+var debug = [];
+for(i=0; i<listofvideos.length; i++){ 
+
+      script = document.createElement('script');
+      script.src = 'videos/' + listofvideos[i] + '.txt';	
+      script.id = listofvideos[i];
+      script.type = 'text/javascript';
+      script.async = true;
+	script.onload = function(){
+
+	feed.innerHTML = feed.innerHTML + `<a href='?video=`+ this.id +`'><img style="height:100; vertical-align: middle; " src="images/`+ this.id +`_thumb.png"></img>` + name + `</a><br>`
+
+	}
+
+document.getElementsByTagName('head')[0].appendChild(script);
+
+
+}
+
+
+}else{
+var feed = document.querySelector('#feed');
+
+feed.style.textShadow='-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000';
+document.getElementById("VideoInf").style.display = 'inline-block';
+
+}
+
+const video = document.querySelector("#video")
+
+if(video == undefined){
+console.log(`If you see an error "Cannot set properties of null (setting 'src')" thats ok. UNLESS You're watching a video`)
+
+}
+video.src = "videos/" + watching + ".mp4";
+
+
+video.addEventListener("canplay",function(){
+//document.getElementById("vidhold").style.maxHeight = video.offsetHeight;
+})
+
+video.addEventListener("error",function(){
+
+if(video.duration * 0 != 0){
+document.querySelector('#wrapper').innerHTML = "404, video not found. <a href='?'>Go back</a>";
+
+//sneaky sneaky
+if(watching == 'secret'){
+var quotes = [
+"If you own Neverwinter Nights, start a new game from the Prolouge, and when you get to purchase an item, buy the Paladin's Tunic for free, and sell it for 1GP. Infinite Profit!",
+"I think Digimon: The Movie is awesome!",
+"My favorite Pokemon are: Charizard, Vulpix, Jigglypuff, and Pikachu.",
+"Minecraft can be mispelled as Minceraft on the title screen, but only on the Java Edition.",
+"On every version of Minecraft besides Java Edition, you can splash text that reads, ''This splash text never appears on the title screen, isn't that strange?''. It never appears on the Java Edition.",
+"I had a dream... YOU were in it.",
+"I like Gabumon, he's nice.",
+"My favorite Digimon is Guilmon",
+"Shrek's breath is lighter than air",
+"That E-Mail isn't mine! It's my brother's.",
+"I sense, a Dragon Warrior is among us.",
+"The first movie I ever saw in a theater was Deadpool 3.",
+"<span style='color:yellow'>The name's Rex, T-Rex</span>",
+"The Digivolutions cannot be stopped! Digimon rule! Digimon rock!",
+"<span style='color:yellow'>Did you know there are two worlds? Our world and the digital world, now don't plan on taking a vacation there. I'm not sure where it is.</span>",
+"I've been practicing memorizing all the words to Digimon: The Movie",
+"Try again later",
+"There are 7 checkpoints before Chemical Plant Zone in Sonic 2",
+"Joclaw_35 is based off the Chinese new year for 2024, the Wood Dragon.",
+"The websites colors are based off Meridell",
+"My favorite color is Red",
+"I prefer to call him Dr.Robotnik",
+"I don't find myself to be a Snake person, but I do like Hissies",
+"<span style='color:yellow'>I play chicken with the plain train chicken with the plain train.</span>",
+"I never had to knock on wood, but I know someone who would. Makes me wonder if I should."
+
+]
+document.querySelector('#wrapper').innerHTML = "You found the secret 404! Here's a fun <span title='Yellow ones are false' style='text-decoration: underline; '>fact</span>, "+ quotes[Math.round( Math.random() * quotes.length - 1)] +" . <a href='?'>Go back</a>";
+}
+
+}
+})
+
+
+document.querySelector('title').innerHTML = "Watching, " + watching + "- king_of_wolves10"
+document.querySelector('body').style.backgroundImage = "url('images/" + watching + "_bg.png')"
+
+      script = document.createElement('script');
+      script.src = 'videos/' + watching + '.txt';	
+      script.type = 'text/javascript';
+      script.async = true;
+	script.onload = function(){
+	if(typeof cap != 'undefined') {
+	document.querySelector('#kw_captions').style.backgroundColor = "#a1a1a100"; document.querySelector('#kw_captions').style.filter='grayscale(0)'; 
+	}	
+	 document.getElementById("name").innerText = name; document.getElementById("desc").innerText = desc;
+	}
+
+document.getElementsByTagName('head')[0].appendChild(script);
+	
+
+
+
+
+document.querySelector('#kw_play').style.backgroundPosition = '-64px 0px';
+starts = [];
+ends = [];
+function setCCtime(){
+
+	for(ccID = 0; ccID < cap.length; ccID ++ ){	
+		var starttime = cap[ccID].start;
+		var endTime = cap[ccID].end;
+		
+		starttime[1] += starttime[0] * 60; starttime[0] = 0;
+		starttime[2] += starttime[1] * 60; starttime[1] = 0;
+		starttime[2] += Number(starttime[3]) / 1000; starttime[3] = 0;
+	
+		endTime [1] += endTime [0] * 60; endTime[0] = 0;
+		endTime [2] += endTime [1] * 60; endTime[1] = 0;
+		endTime [2] += Number(endTime[3]) / 1000; endTime[3] = 0;	
+		starts[ccID] = starttime[2]; ends[ccID] = endTime[2];
+	}
+ccID = 0;
+}
+
+
+noSound = new Audio
+noSound.src = "nope.ogg"
+
+function updateSub(){
+
+
+	var subtxt = document.querySelector('#subTxt')
+		if( video.currentTime > starts[ccID] ){
+
+		subtxt.innerHTML =cap[ccID].text;
+		subtxt.style.bottom = 20 + subtxt.offsetHeight;
+		subtxt.style.marginBottom = 0 - subtxt.offsetHeight;
+
+		}
+		if(video.currentTime > ends[ccID]){ccID ++; subtxt.innerHTML = ""; subtxt.style.marginBottom = 0;}
+
+
+		
+
+}
+
+const captions = (e) => {
+
+if(typeof cap == 'undefined'){noSound.play(); return}
+cc = !cc; document.querySelector('#subTxt').innerHTML = "";
+document.querySelector('#kw_captions').style.backgroundColor = "rgb(255, 191 ,47,"+ (255 * (cc - 0) ) +")"
+}
+
+document.querySelector('.timeline').addEventListener("click", function(e){
+var mx = e.offsetX;
+
+video.currentTime = ((video.duration/100) * ( (mx / document.querySelector('.timeline').offsetWidth ) * 100) );
+
+ccIDfix();
+})
+
+function ccIDfix(){
+document.querySelector('#subTxt').style.marginBottom = 0;
+ccID = 0; document.querySelector('#subTxt').innerHTML = "";
+for(i = 0; i < cap.length; i ++){
+		if(video.currentTime > ends[ccID]){ccID++;}
+}
+updateSub();
+
+}
+
+// update the progress bar
+video.addEventListener("timeupdate", () => {
+
+var posE = document.getElementById("pos");
+var lenE = document.getElementById("len");
+
+var posS = Math.round(video.currentTime % 60).toString()
+var posM = Math.floor(video.currentTime / 60).toString()
+
+var lenS = Math.round((video.duration - video.currentTime) % 60).toString()
+var lenM = Math.floor((video.duration - video.currentTime) / 60).toString()
+
+posE.innerHTML = "00".slice(posM.length) + posM + ":" + "00".slice(posS.length) + posS;
+lenE.innerHTML = "00".slice(lenM.length) + lenM + ":" + "00".slice(lenS.length) + lenS;
+
+//update captions
+if(cc){updateSub();}else{ document.querySelector('#subTxt').innerHTML = "";	 }
+
+    let curr = (video.currentTime / video.duration) * 100
+    if(video.ended){
+	document.querySelector('#kw_play').style.backgroundPosition = '-64px 0px';
+    }
+    document.querySelector('.inner').style.width = `${curr}%`
+})
+// pause or play the video
+const play = (e) => {
+    // Condition when to play a video
+    if(video.paused){
+	document.querySelector('#kw_play').style.backgroundPosition = '0px 0px';
+        video.play()
+	setCCtime();
+    }
+    else{
+	document.querySelector('#kw_play').style.backgroundPosition = '-64px 0px';
+        video.pause()
+    }
+}
+// trigger fullscreen
+const fullScreen = (e) => {
+    e.preventDefault()
+    document.querySelector('.container').requestFullscreen();
+    fs = true;
+}
+
+// download the video
+const download = (e) => {
+    e.preventDefault()
+    let a = document.createElement('a')
+    a.href = video.src 
+    a.download = "video.mp4"
+    document.body.appendChild(a)
+    a.click()
+    document.body.removeChild(a)
+}
+// rewind the current time
+const rewind = (e) => {  
+	video.currentTime -= 5
+ccIDfix();
+}
+// forward the current time
+const forward = (e) => {
+    video.currentTime += 5
+ccIDfix();
+}
+//fast forward the current time
+const fastforward = (e) => {
+    video.currentTime += 15
+ccIDfix();
+}
+
+//fast rewind the current time
+const fastrewind = (e) => {
+    video.currentTime -= 15
+ccIDfix();
+}
+
+//restart
+const reset = (e) => {
+    video.currentTime = 0;
+ccIDfix();
+}
+</script>
