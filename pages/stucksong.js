@@ -4,10 +4,10 @@ audiotag = document.getElementById("song");
 songtitle = document.getElementById("songname");
 
 songname = "Dragon Ball Z, Tenkaichi Tag Team/Budokai HD Collection: Options/Game Select";
-songsrc = "";
+songsrc = "songoftheday.mp3";
 
 songtitle.addEventListener("load",function(){
-
+if(songsrc == "" || songname == ""){return}
   if(songsrc != "songoftheday.mp3"){
   songtitle.innerText = songname + "\n" + "Audio source: " + songsrc;
   }else{
