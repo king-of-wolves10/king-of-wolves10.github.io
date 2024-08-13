@@ -6,23 +6,23 @@ body{
     text-align:center;
 }
 
-article {
-padding-bottom:100;
-position: relative;
-}
-
-.border{
+.border {s
     border-left-color: white;
     border-top-color: silver;
     border-bottom-color: black;
     border-right-color: grey;
     border-width: 5px;
     border-style: solid;
-    background-color:#123456
 }
 
+article {
+padding-bottom:100;
+position: relative;
+}
+
+
 #welcome{
-    background: -webkit-linear-gradient(#ff8100, #ff8100, #a95a00, #ff8100, #ff8100, #a95a00, #a95a00, #a95a00, #000000);
+     background: -webkit-linear-gradient(#ff8100, #ff8100, #a95a00, #ff8100, #ff8100, #a95a00, #a95a00, #a95a00, #000000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-color: red;
@@ -61,7 +61,7 @@ header{
     text-align:left;
     width: 100%;
     border-bottom-color: #3a0202;
-    height: 10%;
+   
     border-bottom-style: solid;
     border-bottom-width: 10px;
     background-image: linear-gradient(171deg, #a30000, #471b05);
@@ -77,3 +77,4 @@ header{
     border-top-width: 10px;
     width: 100%;
 }
+
