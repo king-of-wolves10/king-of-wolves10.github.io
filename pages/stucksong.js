@@ -1,4 +1,4 @@
-//This is just a way to quickly edit the Song of the Day without digging in the HTML
+//This doesnt work for GitHub Pages, because I need to update the HTML file anyways, what a rip.
 
 audiotag = document.getElementById("song");
 songtitle = document.getElementById("songname");
