@@ -1,0 +1,22 @@
+<style>
+body{
+    background-color: #10093a; color:white;
+    text-align:center;
+}
+* { margin: 0; padding: 0 }
+a { color: gold;}
+nav{ color: white; }
+</style>
+<img id="room" src="ShipOut.png" ></img><br>
+
+<a href="#" onclick="goto('ShipCaproom.png') ">Enter the Captain's Room</a><br>
+<a href="#" onclick="goto('ShipIn.png') ">Go inside the ship</a><br>
+<a href="#" onclick="goto('ShipOut.png') ">Go outside</a><br>
+<a href="../../aboutme.html#ship">Return</a><br>
+
+<script>
+function goto(img){
+
+document.getElementById("room").src = img
+}
+</script>
