@@ -6,6 +6,27 @@ var levelcolors = ['grey','grey','blue','blue','blue','orange','orange','aqua'];
 var playerspawns = [ {'x':100,'y':400},{'x':100,'y':400},{'x':100,'y':400},{'x':200,'y':400},{'x':200,'y':400},{'x':100,'y':100},{'x':200,'y':100},{'x':150,'y':150} ]
 var wandspawns = [{'x':350,'y':100},{'x':200,'y':250},{'x':400,'y':100},{'x':200,'y':200},{'x':200,'y':250},{'x':350,'y':150},{'x':80,'y':420},{'x':300,'y':150}];
 
+
+var abouttext = [
+
+["Fetch is a game I made a long time ago,"],
+["what you see today is a recreation."],
+[""],
+["Use the arrow keys, AWSD, or tap to move."],
+["collect the wand, and enter the portal to win."],
+["Be sure not to touch any walls along the way, because"],
+["that will kill you. Walking to the edge of the screen will"],
+["warp you to the other side of the screen."],
+["When trying to warp on mobile, tap the edges of the"],
+["screen to always move that direction."],
+[""],
+["If this is your first time playing, play the Normal mode,"],
+["the Original mode is more difficult with it's terrible controls."],
+["Younger me knew this though, and put a bunch of"],
+["timing obstacles to mess with the player ;)"],
+
+
+]
 var redblocks = [ 'filler',[],[],[],[],[],[[200, 330, 100, 112]],[[273, 383, 226, 82]],[[120,328,81,77],[291,321,82,88]]]
 var leveldata = ['filler',
 
@@ -20,7 +41,7 @@ var leveldata = ['filler',
 ]
 
 c.width = 500; c.height = 500;
-var cw = c.width;
+var cw = c.width; gamescale = 1;
 var ch = c.height; mx = 0; my = 0;
 var cwH = cw / 2; select = 0; keys = {"l":0, 'r':0, 'u':0, 'd':0, 's':0}
 var chH = ch / 2; level = 1; px = 0; py = 0; pw = 45; ph = 35;
@@ -45,17 +66,24 @@ window.requestAnimationFrame(loop);
 });
 
 
-c.addEventListener('mousedown',function(EEVEE){if(md==false){msx=mx; msy=my;} md=true;})
-c.addEventListener('mouseup',function(EEVEE){md=false; })// seeecret level editor if(keys.s==0){return} console.log(msx + "," + msy + "," + (mx - msx) + "," + (my - msy) ) 
+c.addEventListener('mousedown',function(EEVEE){if(md==false){msx=mx; msy=my;} md=true;
+EEVEE.preventDefault();
+
+})
+c.addEventListener('mouseup',function(EEVEE){md=false; 
+keys.l = 0; keys.r = 0; keys.u = 0; keys.d = 0;
+
+})// seeecret level editor if(keys.s==0){return} console.log(msx + "," + msy + "," + (mx - msx) + "," + (my - msy) ) 
 //leveldata[level][leveldata[level].length] = [msx,msy,(mx - msx),(my - msy)];
 //})
 
-c.addEventListener('mousemove',function(EEVEE){mx = EEVEE.offsetX;my = EEVEE.offsetY;
+c.addEventListener('mousemove',function(EEVEE){ mx = EEVEE.offsetX / gamescale ;my = EEVEE.offsetY / gamescale;
 
 
 })
 c.addEventListener('click',function(EEVEE){
 
+if(gamestate == "about"){gamestate = "title"; select="nil";}
 if(select != "" & gamestate == "chooseGM"){gamestate = "game"; init(); }
 if(select == "Play"){gamestate = "chooseGM"}
 if(select == "About"){gamestate = "about"}
@@ -71,12 +99,12 @@ if(e == " " & EEVEE.target == document.body ){EEVEE.preventDefault(); }
 if(e == "arrowdown" & EEVEE.target == document.body ){EEVEE.preventDefault(); }
 if(e == "arrowup" & EEVEE.target == document.body ){EEVEE.preventDefault(); }
 if(e == " " & keys.s < 2){keys.s ++;}
-if( (e == "a" || e == "arrowleft") & keys.l < 2){keys.l ++; }
-if( (e == "d" || e == "arrowright") & keys.r < 2){keys.r ++;}
-if( (e == "w" || e == "arrowup") & keys.u < 2){keys.u ++;}
-if( (e == "s" || e == "arrowdown") & keys.d < 2){keys.d ++;}
+if( (e == "a" || e == "arrowleft") & keys.l < 2){keys.l = 1; }
+if( (e == "d" || e == "arrowright") & keys.r < 2){keys.r = 1;}
+if( (e == "w" || e == "arrowup") & keys.u < 2){keys.u = 1;}
+if( (e == "s" || e == "arrowdown") & keys.d < 2){keys.d = 1;}
 
-if(select == "Original"){ 
+if(select == "Original" & !md){ 
 
 if( e == "a" || e == "arrowleft" ){px -= 16; }
 if( e == "d" || e == "arrowright" ){px += 16;}
@@ -106,7 +134,7 @@ if( (e == "s" || e == "arrowdown")){keys.d =0;}
 })
 
 function loop(){
-gamescale = (500 / c.offsetHeight)
+gamescale = (c.offsetHeight / 500) 
 if(gamestate == "title"){
 handleTitle();
 }
@@ -131,22 +159,11 @@ cc.textAlign = "start";
 
 cc.fillStyle = "silver";
 
-cc.fillText("Fetch is a game I made a long time ago,",0,20);
-cc.fillText("what you see today is a recreation.",0,40);
-
-cc.fillText("Use the arrow keys, or AWSD to move.",0,100);
-cc.fillText("collect the wand, and enter the portal to win.",0,120 );
-cc.fillText("Be sure not to touch any walls along the way, because",0,140 );
-cc.fillText("that will kill you. Walking to the edge of the screen will",0,160);
-cc.fillText("warp you to the other side of the screen.",0,180);
-
-cc.fillText("If this is your first time playing, play the Normal mode,",0,220);
-cc.fillText("the Original mode is more difficult with it's terrible controls.",0,240);
-cc.fillText("Younger me knew this though, and put a bunch of",0,260);
-cc.fillText("timing obstacles to mess with the player ;)",0,280);
-
+for(i=0; i<abouttext.length; i++){
+cc.fillText( abouttext[i],0,20 + i*20)
+}
 cc.fillStyle = "white";
-cc.fillText("Press the spacebar to return.",0,340);
+cc.fillText("Click anywhere to return",0,420);
 
 cc.font = "15px poorrichard";
 cc.fillText("Created by king_of_wolves10, hosted at king-of-wolves10.github.io",0,ch - 20);
@@ -154,6 +171,9 @@ cc.fillText("Created by king_of_wolves10, hosted at king-of-wolves10.github.io",
 
 globalTimer += 0.05;
 globalTimer %= 496;
+
+
+
 window.requestAnimationFrame(loop);
 }
 
@@ -161,20 +181,21 @@ window.requestAnimationFrame(loop);
 function handleTitle(){
 
 select = ""; cc.textAlign = "center";
-cc.clearRect(0,0,cw,ch); cc.fillStyle = "white"
+cc.clearRect(0,0,cw,ch); 
+
+cc.fillStyle = "white"
 var pad = 15; cc.font = "70px poorrichard";
-var f = cc.measureText("Fetch");
+var f = cc.measureText("Fetch!");
 
 cc.drawImage(border,(cwH - f.width / 2) - pad ,c.width / 3 - (55 + pad), f.width + (pad * 2),60 + (pad * 2) );
-cc.fillText("Fetch",cwH,c.height / 3);
+cc.fillText("Fetch!",cwH,c.height / 3);
 
 cc.font = "30px poorrichard";
 var f = cc.measureText("Play Game");
 
-//500 is the width and height, it is divided by the width/height of the canvas so the mouse will work when the canvas is smaller
-//its busted, but it works well enough to get you in the game.
-if((mx * gamescale ) > cwH - (f.width /2 * gamescale) & (mx * gamescale )  < ( (cwH + f.width /2) * gamescale) ){
-if( (my * gamescale )  > chH - 30 & (my * gamescale ) < chH + 0 ){
+
+if( mx > cwH - f.width /2 & mx  < (cwH + f.width /2) ){
+if( my > chH - 30 & my < chH + 0 ){
 cc.fillStyle = "yellow"; select = "Play";
 }}
 
@@ -184,8 +205,8 @@ cc.fillStyle = "white";
 
 var f = cc.measureText("About");
 
-if((mx * gamescale ) > cwH - (f.width /2 * gamescale) & (mx * gamescale )  < ( (cwH + f.width /2) * gamescale) ){
-if((my * gamescale ) > (chH + 60) - 30 & (my * gamescale ) < (chH + 60) + 0 ){
+if( mx > cwH - f.width /2 & mx  < (cwH + f.width /2) ){
+if( my > (chH + 60) - 30 & my < (chH + 60) + 0 ){
 cc.fillStyle = "yellow"; select = "About";
 }}
 
@@ -207,8 +228,8 @@ cc.drawImage(border,(cwH - f.width / 2) - pad ,100 - (30 + pad), f.width + (pad 
 cc.fillText("Choose a game mode.",cwH,100);
 select = "";
 var f = cc.measureText("Normal");
-if( (mx * gamescale ) > ( (cwH / 2) * gamescale ) - f.width /2 & (mx * gamescale ) <( (cwH / 2)  * gamescale ) + f.width / 2){
-if( (my * gamescale ) > chH - 30 & (my * gamescale )  < (chH + 30) ){
+if( mx > (cwH / 2) - f.width /2 & mx < (cwH / 2) + f.width / 2){
+if( my > chH - 30 & my  < (chH + 30) ){
 cc.fillStyle = "yellow"; select = "Normal";
 }}
 
@@ -216,8 +237,8 @@ cc.fillText("Normal",cwH / 2,chH);
 
 cc.fillStyle = "white";
 var f = cc.measureText("Original");
-if((mx * gamescale ) >  (cwH + ( (cwH / 2)  * gamescale ) )- f.width /2 & (mx * gamescale ) < ( (cwH + (cwH / 2) ) * gamescale )  + f.width / 2){
-if((my * (500/ c.offsetHeight) ) > chH - 30 & (my * (500/ c.offsetHeight) ) < (chH + 30) ){
+if( mx > (cwH + (cwH / 2) ) - f.width /2 & mx < cwH + (cwH / 2)  + f.width / 2){
+if( my > chH - 30 & my < (chH + 30) ){
 cc.fillStyle = "yellow"; select = "Original";
 }}
 
@@ -259,7 +280,22 @@ cc.fillText("Press Space to reset ",cwH,cwH);
 
 function handleGame(){
 	cc.clearRect(0,0,cw,ch);
+if(md){
 
+	if( my < 20){keys.u ++; keys.d = 0;}
+	else if( my > 470){keys.d ++; keys.u = 0;}
+
+	else if(my < py){keys.u ++; keys.d = 0; }	
+	else if(my > py+ph ){keys.d ++; keys.u = 0;}
+
+	else if( mx > 470){keys.r ++; keys.l = 0;}
+	else if( mx < 20){keys.l ++; keys.r = 0;}
+
+	else if(mx > px+pw){keys.r ++; keys.l = 0; keys.u = 0; keys.d = 0;}
+	else if(mx < px){keys.l++; keys.r = 0;  keys.u = 0; keys.d = 0;}
+
+	else { keys.l = 0; keys.r = 0; keys.u = 0; keys.d = 0}
+}
 for(i=0; i<leveldata[level].length; i++){
 var a = leveldata[level][i];
 var b = redblocks[level][i];
@@ -274,6 +310,11 @@ if(keys.l > 0){px -= 8}
 if(keys.r > 0){px += 8}
 if(keys.u > 0){py -= 8}
 if(keys.d > 0){py += 8}
+}else if(md){
+if(keys.l == 1 || (keys.l > 30 & (keys.l % 2) == 0 ) ){px -= 16}
+if(keys.r == 1 || (keys.r > 30 & (keys.r % 2) == 0 ) ){px += 16}
+if(keys.u == 1 || (keys.u > 30 & (keys.u % 2) == 0 ) ){py -= 16}
+if(keys.d == 1 || (keys.d > 30 & (keys.d % 2) == 0 ) ){py += 16}
 }
 
 
@@ -377,7 +418,7 @@ function drawoldportal(){
 
 
 cc.fillStyle = "yellow"
-cc.fillRect(playerspawns[level - 1].x - 8, playerspawns[level - 1].y,64,10 )
-cc.fillRect(playerspawns[level - 1].x + 15, playerspawns[level - 1].y - 25,10,64 )
+cc.fillRect(playerspawns[level - 1].x - 8, playerspawns[level - 1].y - 20,64,64)
+
 
 }
