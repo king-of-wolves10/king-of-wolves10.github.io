@@ -24,7 +24,6 @@ var abouttext = [
 ["the Original mode is more difficult with it's terrible controls."],
 ["Younger me knew this though, and put a bunch of"],
 ["timing obstacles to mess with the player ;)"],
-["BTW you can hold the key on Original Difficulty"]
 
 
 ]
@@ -67,22 +66,75 @@ window.requestAnimationFrame(loop);
 });
 
 
-c.addEventListener('mousedown',function(EEVEE){if(md==false){msx=mx; msy=my;} md=true;
+c.addEventListener('mousedown',function(EEVEE){mx = EEVEE.offsetX / gamescale ;my = EEVEE.offsetY / gamescale;
+if(md==false){msx=mx; msy=my;} 
+
+md=true;
 EEVEE.preventDefault();
 
-})
+});
+
+
+
+c.addEventListener("touchstart", function (e) {
+  if (e.target == canvas) {e.preventDefault();}
+        mousePos = getTouchPos(canvas, e);
+  var touch = e.touches[0];
+  var mouseEvent = new MouseEvent("mousedown", {
+    clientX: touch.clientX,
+    clientY: touch.clientY
+  });
+  c.dispatchEvent(mouseEvent);
+}, false);
+
+c.addEventListener("touchend", function (e) {
+if (e.target == canvas) {e.preventDefault();}
+  var mouseEvent = new MouseEvent("click", {});
+  c.dispatchEvent(mouseEvent);
+  var mouseEvent = new MouseEvent("mouseup", {});
+  c.dispatchEvent(mouseEvent);
+}, false);
+
+c.addEventListener("touchmove", function (e) {
+if (e.target == canvas) {e.preventDefault();}
+  var touch = e.touches[0];
+  var mouseEvent = new MouseEvent("mousemove", {
+    clientX: touch.clientX,
+    clientY: touch.clientY
+  });
+  c.dispatchEvent(mouseEvent);
+}, false);
+
+// Get the position of a touch relative to the canvas
+function getTouchPos(canvasDom, touchEvent) {
+  var rect = canvasDom.getBoundingClientRect();
+  return {
+    x: touchEvent.touches[0].clientX - rect.left,
+    y: touchEvent.touches[0].clientY - rect.top
+  };
+}
+
 c.addEventListener('mouseup',function(EEVEE){md=false; 
 keys.l = 0; keys.r = 0; keys.u = 0; keys.d = 0;
 
-})// seeecret level editor if(keys.s==0){return} console.log(msx + "," + msy + "," + (mx - msx) + "," + (my - msy) ) 
+}// seeecret level editor if(keys.s==0){return} console.log(msx + "," + msy + "," + (mx - msx) + "," + (my - msy) ) 
 //leveldata[level][leveldata[level].length] = [msx,msy,(mx - msx),(my - msy)];
-//})
+//}
+)
+
+
+
 
 c.addEventListener('mousemove',function(EEVEE){ mx = EEVEE.offsetX / gamescale ;my = EEVEE.offsetY / gamescale;
+});
+
+//c.addEventListener('touchmove',function(EEVEE){ console.log(EEVEE)});
 
 
-})
-c.addEventListener('click',function(EEVEE){
+
+c.addEventListener('click',click)
+
+function click(EEVEE){
 
 if(gamestate == "yay"){gamestate = "game"; if(level==9){gamestate="title"; level = 1;} }
 if(gamestate == "about"){gamestate = "title"; select="nil";}
@@ -91,7 +143,7 @@ if(select == "Play"){gamestate = "chooseGM"}
 if(select == "About"){gamestate = "about"}
 
 
-})
+}
 
 window.addEventListener('keydown',function(EEVEE){
 
