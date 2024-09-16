@@ -24,6 +24,7 @@ var abouttext = [
 ["the Original mode is more difficult with it's terrible controls."],
 ["Younger me knew this though, and put a bunch of"],
 ["timing obstacles to mess with the player ;)"],
+["BTW you can hold the key on Original Difficulty"]
 
 
 ]
