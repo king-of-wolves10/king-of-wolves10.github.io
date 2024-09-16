@@ -83,6 +83,7 @@ c.addEventListener('mousemove',function(EEVEE){ mx = EEVEE.offsetX / gamescale ;
 })
 c.addEventListener('click',function(EEVEE){
 
+if(gamestate == "yay"){gamestate = "game"; if(level==9){gamestate="title"; level = 1;} }
 if(gamestate == "about"){gamestate = "title"; select="nil";}
 if(select != "" & gamestate == "chooseGM"){gamestate = "game"; init(); }
 if(select == "Play"){gamestate = "chooseGM"}
@@ -270,7 +271,7 @@ cc.drawImage(border,110,100,280,200);
 
 if(level < 9){
 cc.fillText("Level " + level,cwH,ch / 3);
-cc.fillText("Press Spacebar ",cwH,cwH);
+cc.fillText("Press Space/Tap ",cwH,cwH);
 }else{
 cc.fillText("Game Complete",cwH,ch / 3);
 cc.fillText("Press Space to reset ",cwH,cwH);
