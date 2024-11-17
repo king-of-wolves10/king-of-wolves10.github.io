@@ -1,29 +1,39 @@
 <head>
-<link rel="stylesheet" href="../generic.css">
+<link rel="stylesheet" href="../../generic.css">
 <link rel="icon" href="../../favicon.ico">
 <title>Games - king_of_wolves10</title>
 
 <style>
-.border{background-image: linear-gradient(0deg, #0f0f0f, navy);}
+
+.game { border: groove gold 20px; }
+table ,tr ,td {padding:0; background-color:transparent; border:none; color:black}
+td {width:200px; background-color:white; border: inset black 10px}
 </style>
 </head>
 
 <html>
 <body>
 
-  <header>
-    <h1 id="Welcome">King of Wolves website! </h1><br>
-    <nav><a href="../../index.html">Home</a> | <a href="../aboutme.html">About me</a> | <a href="../makeOwn.html">How to make your own website</a> </nav>
-  </header>
+  <script src="../../buildheader.js"></script>
 
 <div id="wrapper" style="min-height: calc(100vh - 100px);">
 <article>
 
-<h2>Choose a game!</h2>
-<div style="width:90%; display: inline-block;" class="border">
-<a href="fetch.html"> <img src="fetch_assets/thumbnail.bmp"></img> </a>
 
+<h2>Choose a game!</h2>
+
+<div style="width:90%; display: inline-block; padding:45px;">
+	<div class="scroll">
+
+	<table>
+	<tr>
+	<td class="game"><a href="fetch.html"> <img src="fetch_assets/thumbnail.bmp"></img> </a></td>
+	<td>You're a rock in a maze, looking for his wand. You must collect it, and make it back.</td>
+	</tr>
+	</table>
+	</div>
 </div>
+
 </article>
 </div>
 
