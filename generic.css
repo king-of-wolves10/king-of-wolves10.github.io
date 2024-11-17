@@ -3,7 +3,7 @@ a { color: gold; text-decoration: underline;}
 nav{ color: white; }
 .scroll {
 
-  border-image: url('scroll.png') 130 / 45px round;
+  border-image: url('scroll.png') 130 / 45px stretch;
   border-image-outset: 45px; background-color:#dfb483;
 style="overflow-y:scroll; height:70%"
 }
