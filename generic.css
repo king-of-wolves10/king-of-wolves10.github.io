@@ -5,7 +5,7 @@ nav{ color: white; }
 
   border-image: url('scroll.png') 130 / 45px stretch;
   border-image-outset: 45px; background-color:#dfb483;
-style="overflow-y:scroll; height:70%"
+  overflow-y:scroll; height:70%
 }
 body{
     background-color: #10093a; color:white;
