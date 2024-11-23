@@ -1,0 +1,24 @@
+<style>
+body{
+    background-color: #10093a; color:white;
+    text-align:center;
+}
+* { margin: 0; padding: 0 }
+a { color: gold;}
+nav{ color: white; }
+</style>
+<img id="room" src="Dragon Close View.png" ></img><br>
+
+<a href="#" onclick="goto('Dragon Close View.png') ">Close up view</a><br>
+<a href="#" onclick="goto('Dragon Bridge View.png') ">Far away view</a><br>
+<a href="#"  onclick="goto('Dragon Boat View.png') ">Boat view</a><br>
+<br>
+<a href="../../aboutme.html#dragon">Return</a><br>
+
+<script>
+function goto(img){
+
+document.getElementById("room").src = img
+
+}
+</script>
