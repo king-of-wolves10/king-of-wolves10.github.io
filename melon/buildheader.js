@@ -1,15 +1,8 @@
 links = [ 
-{"title":"Home", href:"index"},
-{"title":"Guilds Game", href:"pages/GuildGame"}, 
-{"title":"How to make your own website", href:"pages/makeOwn"}, 
-{"title":"About Me", href:"pages/aboutme"  },
-{"title":"Games", href:"pages/games/index" },
-{"title":"Videos", href:"pages/videos"  },
-
-
-
+//{"title":"Home", href:"index"},
 ]
-var root = "/"
+
+var root = "/melon/"
 
 var list = ""
 for(i=0; i<links.length; i++){
@@ -20,9 +13,9 @@ list = list + `<a href="`+ root + links[i].href +`.html"><div class="link">`+ li
 document.write(`
 
       <header>
-	<div style="display: flex;    overflow: hidden; "><a href="`+root + `melon/index.html"><img id="logo" style="height:128px"src="`+ root + `logo2.png"></img></a>
+	<div style="display: flex;    overflow: hidden; "><a href="`+ root.replace('melon','') + `index.html"><img style="height:128px"src="`+ root + `logo2.png"></img> </a>
 	<div style='display:inline-block; width: 80%;'>
-    <h1 id="Welcome">King of Wolves website! </h1><br>
+    <h1 id="Welcome">Melon Head's section </h1><br>
     <nav id="mainnav"> <a href="#wrapper" id="skip">Skip Navigation</a> `+list+`
      </nav>
 </div>
@@ -32,19 +25,6 @@ document.write(`
   </header>
 `
 );
-
-logo = document.querySelector('#logo');
-
-logo.onmouseenter = function(e){
-
-document.querySelector('#welcome').innerText = "Visit MelonHead"
-}
-
-logo.onmouseleave = function(e){
-
-document.querySelector('#welcome').innerText = "King of Wolves website!"
-}
-
 
 tick(); 
 setInterval(tick,1000)

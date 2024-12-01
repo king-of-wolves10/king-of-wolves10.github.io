@@ -11,11 +11,13 @@ else{
 footer.innerHTML = footer.innerHTML + "| <a href='mailto:" + address + "@" + site + "'>E-Mail</a>"
 }
 
+//console.log("You are in the LOCAL version of this webpage, NOT the github site")
 
 function copycode(i,source){
 
 var codes = [
-`<a href="https://king-of-wolves10.github.io"><img src="https://king-of-wolves10.github.io/link.gif"></a>`
+`<a href="https://king-of-wolves10.github.io"><img src="https://king-of-wolves10.github.io/link.gif"></a>`,
+`<a href="https://king-of-wolves10.github.io/melon"><img src="https://king-of-wolves10.github.io/melon/link.gif"></a>`
 ]
 source.innerText = "Copied"
 navigator.clipboard.writeText(codes[i]);

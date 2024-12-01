@@ -1,0 +1,133 @@
+* { margin: 0; padding: 0 }
+a { color: gold; text-decoration: underline;}
+nav{ color: white; }
+.scroll {
+
+  border-image: url('scroll.png') 130 / 45px stretch;
+  border-image-outset: 45px; background-color:#dfb483;
+  overflow-y:scroll; height:70%
+}
+
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+
+body{
+    background-color: #210841; color:white;
+    text-align:center;
+}
+
+header{
+    text-align:left;
+    width: 100%;
+    border-bottom-color: #3a0202;
+   
+    border-bottom-style: solid;
+    border-bottom-width: 10px;
+    background-image: linear-gradient(171deg, #c7ffc6, #91eb61,#66d12d, #d12d2d, #a81111, #620000);
+}
+
+
+#footer{
+    text-align: left;
+    padding-bottom: 20;
+    background-image: linear-gradient(171deg, #a30000, #471b05);
+    border-top-color: #8c1030;
+    border-top-style: solid;
+    border-top-width: 10px;
+    width: 100%;
+}
+
+
+
+code{
+width:80;   height:80;
+  display: inline-block;
+  overflow: scroll;
+  resize:both; background-color:white; color:black; border:thin black;
+  overflow:auto; 
+}
+button {padding:10px}
+#mainnav{
+overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+width:100%
+}
+#skip { width: 0;  color: transparent; }
+#skip:focus { width: unset;  color: yellow;   }
+
+.link , #mainnav , #skip{transform:rotateX(180deg);}
+.link {
+display: inline-block;
+	height: 50%;
+	width:max-content;
+    text-align: center;
+    align-content: center;
+  padding: 6;
+  background-color: #1235;
+  margin: 5;
+  border-style: groove;
+  border-color: #fffc #fff5 #fff9;
+}
+
+.border {
+    border-left-color: white;
+    border-top-color: silver;
+    border-bottom-color: black;
+    border-right-color: grey;
+    border-width: 5px;
+    border-style: solid;
+}
+
+article {
+  position: relative; padding-bottom:20px;
+  min-height: calc(100vh - 100px);
+  
+}
+
+
+#welcome{
+     background: -webkit-linear-gradient(lightblue, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: darkblue;
+    -webkit-text-stroke-width: 0.25px;
+}
+
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
+    unicode-bidi: isolate;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+table, td, tr {
+
+    background-color: grey;
+    color: yellow;
+    border: 5px;
+    margin: 0 auto;
+    padding-right: 10px;
+    border-color: black;
+    border-style: double;
+    text-align: center;
+
+}
+
+tr{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+}
+
