@@ -4,7 +4,6 @@ links = [
 {"title":"How to make your own website", href:"pages/makeOwn"}, 
 {"title":"About Me", href:"pages/aboutme"  },
 {"title":"Games", href:"pages/games/index" },
-{"title":"Videos", href:"pages/videos"  },
 
 
 
