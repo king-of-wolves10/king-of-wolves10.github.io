@@ -20,7 +20,7 @@ list = list + `<a href="`+ root + links[i].href +`.html"><div class="link">`+ li
 document.write(`
 
       <header>
-	<div style="display: flex;    overflow: hidden; "><a href="`+root + `melon/index.html"><img id="logo" style="height:128px"src="`+ root + `logo2.png"></img></a>
+	<div style="display: flex;    overflow: hidden; "><a><img id="logo" style="height:128px"src="`+ root + `logo2.png"></img></a>
 	<div style='display:inline-block; width: 80%;'>
     <h1 id="Welcome">King of Wolves website! </h1><br>
     <nav id="mainnav"> <a href="#wrapper" id="skip">Skip Navigation</a> `+list+`
@@ -37,12 +37,12 @@ logo = document.querySelector('#logo');
 
 logo.onmouseenter = function(e){
 
-document.querySelector('#welcome').innerText = "Visit MelonHead"
+//document.querySelector('#welcome').innerText = "Visit MelonHead"
 }
 
 logo.onmouseleave = function(e){
 
-document.querySelector('#welcome').innerText = "King of Wolves website!"
+//document.querySelector('#welcome').innerText = "King of Wolves website!"
 }
 
 
