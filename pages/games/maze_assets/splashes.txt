@@ -1,0 +1,19 @@
+splash = [
+
+"It's really boring",
+"Unoffical",
+"No rights reserved",
+"I can get you on one",
+"100% Zombie free",
+"Version 1.0",
+"bump",
+"Prodigious!",
+"Dwarf Hole",
+"Something has happened!",
+"Does anyone know that I put this here?",
+"The Fire of Courage",
+"Trudy's Suprise has reset and is waiting for you",
+"*lupe*",
+'Super - Duper, Mega Monster, "Holy Crap" Hedge Maze!',
+"Worse than Adventure"
+]

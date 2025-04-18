@@ -1,16 +1,17 @@
 <head>
 <link rel="stylesheet" href="../../generic.css">
 <link rel="icon" href="../../favicon.ico">
-<title>Fetch | Games - king_of_wolves10</title>
+<title>Maze | Games - king_of_wolves10</title>
 
 <style>
 
-#canvas_wrapper{object-fit: contain;
+#canvas_wrapper{
 
-display:inline-block; height:90%; width:90%; max-width:500; max-height:500; aspect-ratio:1; padding:50px;
+display:inline-block; height:90%; width:90%; max-width:640; max-height:480; aspect-ratio:4/3; padding:50px;
+user-select:none;
 }
 
-#canvas{height:100%; aspect-ratio:1; background-color:black;}
+#canvas{object-fit: contain; height:100%; width:100%; aspect-ratio:4/3; background-color:skyblue; user-select:none;}
 
 </style>
 </head>
@@ -45,28 +46,25 @@ If you can, please enable JavaScript to ensure complete navigation and functiona
 
 </noscript>
 
-<div id="wrapper" >
+<div id="wrapper">
 <div class="sidebar"></div>
 <article>
 
-<h2>Fetch!</h2>
+<h2>My Maze</h2>
 <p>
-Named after the Neopets game, you must play as a familiar rock travelling through a dungeon<br>
-to find your wand that will summon the exit. Use the AWSD or the Arrow keys to move.
+Now you can challenge my maze without the hassle that comes with it<br>
+<br>
+<b>This game's graphics may make some people sick, I'm sorry</b>
 </p>
 
 <div id="canvas_wrapper">
-<canvas id="canvas">
-</canvas>
+<canvas id="canvas" width=640 height=480 >
+</canvas><br>
 <noscript>You must enable JavaScript to play this game</noscript>
+
 </div>
 <br>
 
-
-<p>For this page specifically, you cannot scroll with the spacebar or the arrow keys.</p><br><br>
-<p>You can add this game to your own website. Just copy the code below</p><br>
-
-<code>&lt;iframe src="king-of-wolves10.github.io/games/pages/games/fetchembed.html" width=500 height= 500>&ltiframe></code>
 
 </article>
 </div>
@@ -80,5 +78,7 @@ to find your wand that will summon the exit. Use the AWSD or the Arrow keys to m
 <script src="../../botprevention.js"></script>
 </html>
 
-
-<script src="fetch_assets/code.js"></script>
+<script src="maze_assets/splashes.txt"></script>
+<script src="maze_assets/maze.js"></script>
+<script src="maze_assets/code.js"></script>
+<script src="maze_assets/mainlogic.js"></script>
