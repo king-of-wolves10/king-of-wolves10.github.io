@@ -13,13 +13,15 @@ display:block;
 #mc : focus, #mc : focus{
 display:block;
 }
-details > div{  padding-bottom:100px; width:800px; display:inline-block}
 
-details > summary {
+.showPanel > div{  padding-bottom:100px; width:800px; display:inline-block}
+
+
+.showPanel > summary {
   list-style: none;
 }
 
-details > summary::-webkit-details-marker {
+.showPanel > summary::-webkit-details-marker {
   display: none;
 }
 
@@ -59,27 +61,53 @@ border-style:solid;
   background-repeat: repeat-y;">
 
 <script src="../buildheader.js"></script>
+<noscript>
 
-<div id="wrapper" style="    min-height: calc(100vh - 100px);">
+
+<header>
+	<div style="display: flex;    overflow: hidden; "><a><img id="logo" alt="KingofWolves10" style="height:128px" src="../logo2.png"></a>
+	<div style="display:inline-block; width: 80%;">
+<div id="grad" style="width:100%;"><h1 id="Welcome">King of Wolves website! </h1><img src="../characters.png" style="height:300px; position:relative; left:35%;"></img></div>
+    <nav id="mainnav"> <a href="#wrapper" id="skip">Skip Navigation</a> 
+
+<a href="../index.html"><div class="link">Home</div></a>
+<a href="GuildGame.html"><div class="link">Guilds Game</div></a>
+<a href="makeOwn.html"><div class="link">How to make your own website</div></a>
+<a href="aboutme.html"><div class="link">About Me</div></a>
+<a href="games/index.html"><div class="link">Games</div></a>
+<a href="fun.html"><div class="link">Fun Stuff</div></a>
+     </nav>
+</div>
+This website uses JavaScript to build the header so the links can be updated across all pages quickly.
+If you can, please enable JavaScript to ensure complete navigation and functionality.
+</div>
+
+  </header>
+
+
+</noscript>
+
+<div id="wrapper">
+<div class="sidebar"></div>
 <article>
 
 <p>
-My name is King_of_wolves10, but I accept nicknames. You know I was called Wolfie once?<br>
+My name is King_of_Wolves10, but I accept nicknames. You know I was called Wolfie once?<br>
 <br>
   <h2>Song stuck in my head for the moment</h2>
     
-    <b >Digimon the Movie - Intro (Short) </b><br>
-    <audio src="songoftheday.mp3" controls></audio><br>
-    <p>Audio Source: Here</p>
+    <b >Digimon Savers (Data Squad, Japanese Version) - Intro (Short) </b><br>
+    <audio src="https://dn720302.ca.archive.org/0/items/digimon_savers_original_soundtrack/01.GOUing%21%20Going%21%20My%20Soul%21%21%20%28TV%20Size%29.mp3" controls></audio><br>
+    <p>Audio Source: <a href="https://archive.org/details/digimon_savers_original_soundtrack/01.GOUing!+Going!+My+Soul!!+(TV+Size).mp3">The Internet Archive</a></p>
     <sub>Last updated: 12/22 4:26 PM</sub>
 <br><br>
 I am just a geek, a nerd, and any other word that fits, and thats ok. I play a lot of video games<br>
-such as Neverwinter Nights, Halo, D&D, oh and Neopets!<br>
+such as Neverwinter Nights, Minecraft, Halo, D&D, Baldur's Gate, Sonic, Wonder Boy, Puyo Puyo, Streets of Rage, um.. the list is getting too long, oh and Neopets!<br>
 <br>
 I thought about sharing images and stories about these games, and other ones too. Click a game to see screenshots and stories.
 </p>
 
-<details>
+<details class="showPanel">
 <summary><img alt="Neverwinter Nights" title="Image source: launchbox-app.com" src="https://images.launchbox-app.com/3eb9853c-95fc-4fe6-96f7-497845e722ac.png" style="width:200"></img></summary>
 <div class="border">
 <p id="nwn">
@@ -147,7 +175,7 @@ Dog in the City Core.
 </div>
 
 <div class="photo-border">
-<a title="Click to view full size image" href="images/NWN/NWN_Bigdog.png"><img class="photo" src="images/NWN/NWN_BigdogPreview.jpg"></img></a><br>
+<a title="Click to view full size image" href="images/NWN/NWN_Bigdog.avif"><img class="photo" src="images/NWN/NWN_BigdogPreview.jpg"></img></a><br>
 This one's really good. It helped us fight an evil character.
 </p>
 </div>
@@ -158,7 +186,7 @@ This one's really good. It helped us fight an evil character.
 <br>
   <div class="photo-border">
 <a title="Click to view full size image" href="images/NWN/NWN_Toolset.png"><img class="photo" src="images/NWN/NWN_ToolsetPreview.jpg"></img></a><br>
-I made a Castle <img src="originalsmile.bmp"></img>
+I made a Castle <img src="images/smiley.bmp"></img>
 </p>
 </div>
 <br>
@@ -166,123 +194,11 @@ Wanna know how to play NWN online? Here's two words: <a href="https://www.gamera
 </div>
 </details>
 
-<details>
-<summary>
+<a href="minecraft.html">
 <img alt="Minecraft: Playstation 3 Edition" src="https://images.launchbox-app.com/f8d92848-c9fc-442a-b5bd-d9a79a814973.png" title="Image source: launchbox-app.com" style="width:200"></img>
-</summary>
-<div class="border">
-<a href="#mc">Link to this section</a>
-<p id="mc">Minecraft, like most, I've been playing this for a long time, unfortuntely, I don't got any old worlds to prove it, but here are some builds me and Dinowarrior made recently.</p><br>
-<p>Specific images can be explored! Click on them to view the full photo, and there will be buttons if you can explore them.<br>
-
-  <div class="photo-border" id="ship">
-<a title="Click to view full size image" href="images/MC/ShipExplore.html"><img class="photo" src="images/MC/ShipOut_preview.jpg"></img></a><br>
-Yarr matey, this be a Pirate ship. It's mostly complete.</img>
-</p>
-
-</div>
-
-<div class="photo-border" id="ship">
-<a title="Click to view full size image" href="images/MC/BattlegroundExplore.html"><img class="photo" src="images/MC/Battleground_preview.jpg"></img></a><br>
-This is a village me and my bro built for PvP!</img>
-</p>
-
-</div><br>
-
-<div class="photo-border">
-<a title="Click to view full size image" href="images/MC/Minsc.png"><img class="photo" src="images/MC/Minsc_preview.jpg"></img></a><br>
-A little inside joke</img>
-</p>
-</div>
-
-<div class="photo-border">
-<a title="Click to view full size image" href="images/MC/FamilyGuy.png"><img class="photo" src="images/MC/FamilyGuy_preview.jpg"></img></a><br>
-The Griffin's house</img>
-</p>
-</div><br>
-
-<div class="photo-border" id="ship">
-<a title="Click to view full size image" href="images/MC/Whitehouse.png"><img class="photo" src="images/MC/Whitehouse_preview.jpg"></img></a><br>
-I built a small whitehouse, where Marcus Persson is president!</img>
-</p>
+</a>
 
 
-</div>
-  
-<p>How he became president was a tough journey against 4 trials!<br> Where a few freinds of mine, and my parents voted for Villagers that we're named after famous people.</p>
-
-
-<div class="pair">
-<div class="photo-border">
-<a title="Click to view full size image" href="images/MC/Trial1.gif"><img class="photo" src="images/MC/trial1_preview.gif"></img></a><br>
-Trial 1: The top 4 voted Villagers would be thrown into the pit, where zombies were placed in the edges to herd them to the slime. The first to land on a gold block, WINS!
-</p>
-</div>
-
-<div class="photo-border">
-<a title="Click to view full size image" href="images/MC/Trial2.png"><img class="photo" src="images/MC/Trial2_preview.jpg"></img></a><br>
-Trial 2: Villagers will be chased by zombies, first one to the finish line wins!
-</p>
-</div>
-</div>
-
-<div class="pair">
-<div class="photo-border">
-<a title="Click to view full size image" href="images/MC/Trial3.gif"><img class="photo" src="images/MC/trial3_preview.gif"></img></a><br>
-Trial 3: Villagers will start from the top, and fall to the bottom, while of course, having zombies herd them. First to the bottom WINS!
-</p>
-</div>
-
-<div class="photo-border">
-<a title="Click to view full size image" href="images/MC/ViewMaze.html"><img class="photo" src="images/MC/Trial4_preview.jpg"></img></a><br>
-Trial 4: A few Villagers are put into a maze, whoever wasn't voted doesn't even get a chance to win. All of the Villagers are chased by zombies, last person standing, or the first to reach the exit (which is very unlikely) BECOMES PRESIDENT!!!
-</p>
-</div>
-</div>
-
-<p>Do you dare challenge my maze? You can build it yourself, or visit the maze in person by contacting KingWrath23 on PS3.</p>
-
-<br><br>
-
-<div class="photo-border" id="dragon">
-<a title="Click to view full size image" href="images/MC/DragonExplore.html"><img class="photo" src="images/MC/Dragon_preview.jpg"></img></a><br>
-Here's an amazing stone Dragon statue I built in Survival Mode.
-</p>
-</div>
-
-<h3>Multiplayer World</h3>
-<p>These are builds in my world I play on with friends</p><br>
-
-<div class="pair">
-<div class="photo-border">
-<a title="Click to view full size image" href="images/MC/Herobrine.png"><img class="photo" src="images/MC/Herobrine_preview.jpg"></img></a><br>
-I gave my friend the blocks to do this, I never told him what is was for, he just knew.</img>
-</p>
-</div>
-
-<div class="photo-border">
-<a title="Click to view full size image" href="images/MC/Bench.png"><img class="photo" src="images/MC/Bench_preview.jpg"></img></a><br>
-Handy when waiting for friends.</img>
-</p>
-</div>
-
-<div class="photo-border" id="cake">
-<a title="Click to view full size image" href="images/MC/CakeExplore.html"><img class="photo" src="images/MC/CakeOut_preview.jpg" height=200></img></a><br>
-Cake shop! Yumyumyumyumyum.</img>
-</p>
-</div>
-</div>
-<br>
-<p>
-There was a time where I caught one of my friends stealing cake from the shop<br>
-He drew his Stone Sword at me (Armorless by the way) and I, with my Iron Armor, drew my Diamond Sword<br>
-...<br>
-He hung his head down, and handed the cakes back. I can't be too mad at him, he made that day less boring.
-</p>
-</div>
-
-
-</details>
 
 
 
@@ -293,8 +209,7 @@ He hung his head down, and handed the cakes back. I can't be too mad at him, he 
 <div id="footer">
 <span>Contact me, via: </span><a href="https://www.neopets.com/neomessages.phtml?type=send&amp;recipient=king_of_wolves10">Neomail</a>
 <script src="../botprevention.js"></script><br><br>
-<div style="display:block; text-align:center; width:min-content"><img src="../link.gif"></img><br><a style="cursor: copy; " onclick=" copycode(0,this); ">Copy Code</a> </div>
-
+<script src="../buildfooter.js"></script>
 <br>
 
 </div>

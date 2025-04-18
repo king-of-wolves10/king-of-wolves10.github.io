@@ -1,0 +1,515 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../generic.css">
+<link rel="icon" href="../favicon.ico">
+<title>Silly and Fun stuff - king_of_wolves10</title>
+
+<style>
+
+
+@font-face {
+  font-family: seven;
+  src: url(games/maze_assets/seven.ttf);
+}
+
+
+
+.photo, .photo-nolink {border-color:black; border-style:double}
+
+.photo-border{
+background-color: white;
+    border-color: black;
+    color: black;
+    border-width: thick;
+    border-style: solid;
+    width: min-content;
+    aspect-ratio: 1;
+    display: inline-block;
+}
+
+
+.border{
+background-image: linear-gradient(0deg, #000000a1, #020069a1);
+}
+.sidebar{font-family: initial;}
+.photo:hover{
+border-color:gold;
+border-style:solid;
+}
+
+@keyframes fall {
+  100% {
+    top: 2000px;
+  }
+}
+
+
+@keyframes bounce {
+  50% {
+    scale: 120%;
+  }
+
+  100% {
+    scale: 100%;
+  }
+}
+
+#splashText{
+
+
+animation: 1s infinite normal bounce;
+  animation-timing-function: linear;
+  color: yellow;
+  text-shadow: #77772b 3px 3px;
+  transform: rotate(-25deg);
+  display: block;
+  position: relative;
+  left: 64%;
+width: 250px;
+
+}
+
+.mcButton{background-color: grey;
+  color: white;
+  border:black;
+  background-image: url("images/MC/button.png");
+  background-size: 196px 200%;
+  background-repeat: repeat-x;
+ }
+
+
+.pair{    display: flex;
+    flex-direction: row;
+    justify-content: center;}
+
+.help {
+
+width:24px; height:24px; display:inline-block;
+background-image:url("images/fun/help.png");
+background-size:72px 24px;
+} 
+
+.helpicon  {
+
+width:24px; height:24px; display:inline-block;
+background-image:url("images/fun/help.png");
+background-size:72px 24px;
+} 
+
+.mcBorder {border: solid black;  background-color: #5a98db57;}
+
+.dropdown {
+
+position: absolute; color:white;
+width:fit-content; display:none;
+  margin-top: 32px;
+}
+
+.helplink{ color: transparent;}
+.helplink:focus .dropdown { display:block }
+
+.nostyle{background-color:unset; border:none; color:unset;}
+.nostyle td{background-color:unset; border:none; color:unset;}
+.nostyle tr{background-color:unset; border:none; color:unset;}
+</style>
+</head>
+
+
+<body>
+
+<div id="wrapper">
+<script src="../buildheader.js"></script>
+
+
+<noscript>
+
+
+<header>
+	<div style="display: flex;    overflow: hidden; "><a><img id="logo" alt="KingofWolves10" style="height:128px" src="../logo2.png"></a>
+	<div style="display:inline-block; width: 80%;">
+<div id="grad" style="width:100%;"><h1 id="Welcome">King of Wolves website! </h1><img src="../characters.png" style="height:300px; position:relative; left:35%;"></img></div>
+    <nav id="mainnav"> <a href="#wrapper" id="skip">Skip Navigation</a> 
+
+<a href="../index.html"><div class="link">Home</div></a>
+<a href="GuildGame.html"><div class="link">Guilds Game</div></a>
+<a href="makeOwn.html"><div class="link">How to make your own website</div></a>
+<a href="aboutme.html"><div class="link">About Me</div></a>
+<a href="games/index.html"><div class="link">Games</div></a>
+<a href="fun.html"><div class="link">Fun Stuff</div></a>
+     </nav>
+</div>
+This website uses JavaScript to build the header so the links can be updated across all pages quickly.
+If you can, please enable JavaScript to ensure complete navigation and functionality.
+</div>
+
+  </header>
+
+
+</noscript>
+
+
+<div class="sidebar"></div>
+<article style="font-family:seven; font-size:18px; ">
+
+<div style="text-align:center; min-height: 200px;">
+<img alt="Minecraft: Playstation 3 Edition" src="https://images.launchbox-app.com/f8d92848-c9fc-442a-b5bd-d9a79a814973.png" title="Image source: launchbox-app.com" style="width:500"></img><br>
+<span id="splashtext">It's Awesome</span>
+</div>
+Oh yeah, this section is getting a lot bigger.
+
+
+<p id="mc">Minecraft, an endless dream brought to life by your imagination. This page is dedicated to all of the builds, gamemodes, and memories me, my bro, and PSN friends made within this game.</p><br>
+<p>Specific images can be explored! Click on them to view the full photo, and there will be buttons if you can explore them.<br>
+<p>Images are now categorized by world</p>
+
+<details> <summary class="mcButton">Build it Survival</summary>
+  <div class="photo-border" id="ship">
+<a title="Click to view full size image" href="images/MC/ShipExplore.html"><img class="photo" src="images/MC/ShipOut_preview.jpg"></img></a><br>
+Yarr matey, this be a Pirate ship. It's mostly complete.</img>
+</p>
+</div>
+
+<div class="photo-border">
+   <a title="Click to view full size image" href="images/MC/Minsc.png"><img class="photo" src="images/MC/Minsc_preview.jpg"></img></a><br>
+   A little inside joke</img>
+   </p>
+</div>
+
+<div class="photo-border" id="dragon">
+   <a title="Click to view full size image" href="images/MC/DragonExplore.html"><img class="photo" src="images/MC/Dragon_preview.jpg"></img></a><br>
+   Here's an amazing stone Dragon statue I built in Survival Mode.
+   </p>
+</div>
+
+</details>
+
+<details> <summary class="mcButton">Creative</summary>
+
+<div class="photo-border">
+<a title="Click to view full size image" href="images/MC/BattlegroundExplore.html"><img class="photo" src="images/MC/Battleground_preview.jpg"></img></a><br>
+This is a village me and my bro built for PvP!</img>
+</p>
+
+</div>
+
+
+<div class="photo-border">
+<a title="Click to view full size image" href="images/MC/FamilyGuy.png"><img class="photo" src="images/MC/FamilyGuy_preview.jpg"></img></a><br>
+The Griffin's house</img>
+</p>
+</div>
+
+<div class="photo-border" id="ship">
+<a title="Click to view full size image" href="images/MC/Whitehouse.png"><img class="photo" src="images/MC/Whitehouse_preview.jpg"></img></a><br>
+I built a small whitehouse, where Marcus Persson is president!</img>
+</p>
+
+
+</div>
+  
+<p>How he became president was a tough journey against 4 trials!<br> Where a few freinds of mine, and my parents voted for Villagers that we're named after famous people.</p>
+
+
+<div class="pair">
+<div class="photo-border">
+<a title="Click to view full size image" href="images/MC/Trial1.gif"><img class="photo" src="images/MC/trial1_preview.gif"></img></a><br>
+Trial 1: The top 4 voted Villagers would be thrown into the pit, where zombies were placed in the edges to herd them to the slime. The first to land on a gold block, WINS!
+</p>
+</div>
+
+<div class="photo-border">
+<a title="Click to view full size image" href="images/MC/Trial2.png"><img class="photo" src="images/MC/Trial2_preview.jpg"></img></a><br>
+Trial 2: Villagers will be chased by zombies, first one to the finish line wins!
+</p>
+</div>
+</div>
+
+<div class="pair">
+<div class="photo-border">
+<a title="Click to view full size image" href="images/MC/Trial3.gif"><img class="photo" src="images/MC/trial3_preview.gif"></img></a><br>
+Trial 3: Villagers will start from the top, and fall to the bottom, while of course, having zombies herd them. First to the bottom WINS!
+</p>
+</div>
+
+<div class="photo-border">
+<a title="Click to view full size image" href="images/MC/ViewMaze.html"><img class="photo" src="images/MC/Trial4_preview.jpg"></img></a><br>
+Trial 4: A few Villagers are put into a maze, whoever wasn't voted doesn't even get a chance to win. All of the Villagers are chased by zombies, last person standing, or the first to reach the exit (which is very unlikely) BECOMES PRESIDENT!!!
+</p>
+</div>
+</div>
+
+<p>Do you dare challenge my maze? You can build it yourself, or visit the maze in person by contacting KingWrath23 on PS3.</p>
+
+<br><br>
+</details>
+
+<details> <summary class="mcButton">Multiplayer with Friends</summary>
+<h3>Multiplayer World</h3>
+<p>These are builds in my world I play on with friends</p><br>
+
+<div class="pair">
+<div class="photo-border">
+<a title="Click to view full size image" href="images/MC/Herobrine.png"><img class="photo" src="images/MC/Herobrine_preview.jpg"></img></a><br>
+I gave my friend the blocks to do this, I never told him what is was for, he just knew.</img>
+</p>
+</div>
+
+<div class="photo-border">
+<a title="Click to view full size image" href="images/MC/Bench.png"><img class="photo" src="images/MC/Bench_preview.jpg"></img></a><br>
+Handy when waiting for friends.</img>
+</p>
+</div>
+
+<div class="photo-border" id="cake">
+<a title="Click to view full size image" href="images/MC/CakeExplore.html"><img class="photo" src="images/MC/CakeOut_preview.jpg" height=200></img></a><br>
+Cake shop! Yumyumyumyumyum.</img>
+</p>
+</div>
+</div>
+<br>
+<p>
+There was a time where I caught one of my friends stealing cake from the shop<br>
+He drew his Stone Sword at me (Armorless by the way) and I, with my Iron Armor, drew my Diamond Sword<br>
+...<br>
+He hung his head down, and handed the cakes back. I can't be too mad at him, he made that day less boring.
+</p>
+</details>
+<hr>
+<h3>Gamemodes</h3><br>
+Ever tired of the same old Survival, Creative, and Adventure mode? Here's some new flavors to your Minecraft to spice things up.<br>
+Note: These gamemodes require Host Privliges, which will disable throphies, and most require at least 2 players.<br>
+(You can change the rules if you want)
+<br><br>
+
+<div class="mcborder">
+<h3>Gladiator</h3>
+Mode: <b>Multiple</b>, Difficulty: <b>Any</b>, Minimum Players: <b>2</b> <br><br>
+Disable PvP, daylight and weather cycle, and start in Creative Mode. Build an area to duel in, now enable the daylight and weather cycle and swap all players to Survival mode.
+Players will spend a couple days (however many you decide) preparing for battle by gaining materials, once time is up, enable PvP and duke it out in the Arena.
+<br><br> <h2 style="color:red">You are not allowed to</h2>
+
+<ul>
+<li>Have monsters, golems, or animals fight for you</li>
+<li>Use TNT or End Crystals (they ruin the map)</li>
+</ul>
+
+</div>
+<br><br>
+<div class="mcborder">
+<h3>Eternal Darkness</h3>
+Mode: <b>Survival</b>, Difficulty: <b>Hard</b>, Minimum Players: <b>1</b> <br><br>
+Set time to night, wait about 5 minutes, and Disable daylight cycle. Thats all.
+<br> <br><h2 style="color:red">You are not allowed to</h2>
+
+<ul>
+<li>Disable mob spawning</li>
+</ul>
+</div>
+
+<br><br>
+<div class="mcborder">
+<h3>Spirit Mode</h3>
+Mode: <b>Survival</b>, Difficulty: <b>Hard</b>, Minimum Players: <b>2</b> <br><br>
+Each player has a number of lives, when lives run out, you turn invisible in Creative mode, and kill all players without damaging them directly.
+<br><br>
+ <h2 style="color:red">You are not allowed to</h2>
+<ul>
+<li>Hide from danger, Actively seek it</li>
+<li>Share items, houses, or anything, trading is allowed</li>
+<li>Kill defenseless players. It wouldn't be fun if everyone lost thier lives immedietly</li>
+</ul>
+</div>
+<br><br>
+On the other side of the spectrum, Minecraft may be too exciting for you, so bore yourself with this one
+<br><br>
+<div class="mcborder">
+<h3>Camels back</h3>
+Mode: <b>Survival</b>, Difficulty: <b>Peaceful</b>, Minimum Players: <b>1</b> <br><br>
+One life, no natural regeneration.
+<br><br> <h2 style="color:red">You are not allowed to</h2>
+
+<ul>
+<li>Gain health by any means</li>
+<li>Equip armor</li>
+</ul>
+</div>
+
+</article>
+
+
+
+
+<div id="footer">
+<span>Contact me, via: </span><a href="https://www.neopets.com/neomessages.phtml?type=send&amp;recipient=king_of_wolves10">Neomail</a>
+<script src="../botprevention.js"></script><br><br>
+<script src="../buildfooter.js"></script>
+
+<br>
+
+</div>
+
+</div>
+
+</body></html>
+
+
+<script>
+
+
+
+
+var buttons=document.getElementsByClassName("mcButton");
+
+var yeah = new Audio; yeah.src = "heheyeah.mp3";
+var boop = new Audio; boop.src = "games/maze_assets/uisfx/focus.wav";
+var click = new Audio; click.src = "games/maze_assets/uisfx/press.wav";
+var back = new Audio; back.src =  "games/maze_assets/uisfx/back.wav";
+
+for(i=0; i<buttons.length; i++){
+
+buttons[i].addEventListener("click",function(e){
+
+if(e.target.parentElement.open == true){back.play();}else{click.play();}
+
+})
+
+buttons[i].addEventListener("mouseenter",function(e){
+
+e.target.style.backgroundPositionY = "100%";
+boop.play();
+e.target.style.color = "yellow";
+})
+
+buttons[i].addEventListener("mouseleave",function(e){
+e.target.style.backgroundPositionY = "0px";
+e.target.style.color = "white";
+})
+
+
+}
+var timeout = null;
+splash = [
+
+"We're there dude",
+"Bodacious!",
+"But all I wanted to do is cry",
+"Insists upon itself",
+"Chimichangaaaas!",
+"Test 1, 2, Mojang!",
+"Get Psyched!",
+"I'm too young to die!",
+"We're gonna break yo momma",
+"11 11 11 11 11 11 11",
+"3 times the size of that guy's steak",
+"Why, why here? why when we're typing splash text are we at the bottom of Darth Maul?",
+"Pico Funny, Pico Funny",
+"I'm like the top 1% of splash text",
+"That's the plan >:D",
+"Meanwhile, in the land of Bobby's dreams:",
+"It's over 9001!",
+"Knightwolf is our heeeerooooo!",
+"Who ate all the Pecan Sandies?",
+"Morshu.exe coming in hot",
+"Shoutouts to SimpleFlips",
+"Galunga",
+"Wort wort wort",
+"Allerigic to Honey Buns",
+"Hates O's",
+"Hates Shotgunners",
+"Hates Customers",
+"There are 1720 blocks on this island, most of them are good", 
+"Evades", "Hey all, Scott here",
+"There's a dungeon in the mine", "splash",
+"Better love story then Twilight", "2",
+"We got the Dragon Heart!",
+"Everyone played it.", "and his mean bean machine",
+"Z", "GT",
+"That's my waffle!",
+"Kick her in the balls!",
+"Scott Pilgrim",
+"Caeful Floy, you almost cut my ear off!",
+"Sparking!!!",
+"All of them!?",
+"Hanging on the edge of tomorrow",
+"From the people who saw Shrek",
+"Powering Imagination",
+"Yes little Norb?",
+"When you feel right, look at yourself",
+"When you feel tight, look at yourself",
+"Will eventually take a look at the first Megaman game",
+"Get ready to catch her!",
+"Kirby is a pink guy",
+"I can't stop thinking about the TEE-VEE!",
+"Contains: Fish",
+"Reese's Puffs!", "The Krusty Krab 2", "Arbys",
+"Died of Swamp-ass",
+"Stays up until 1AM",
+"Wololo",
+"Well done Turner!",
+"You already know, we really out here",
+"On vacation",
+"Rated ITLFN", "Rated E for Editble", "Rated R for Ranch",
+"Just one more", "mwiafa"
+]
+var splashele = document.getElementById("splashtext")
+splashele.innerText = splash[ Math.round(Math.random() * (splash.length - 1) ) ];
+if(splashele.innerText == "Get ready to catch her!"){
+
+setTimeout(test,Math.random() * 10000 + 10000)
+
+}
+var code = "";
+function test(){
+
+makePeachFall();
+clearTimeout(timeout);
+}
+
+function makePeachFall(){
+var peach = new Image;
+var got = false;
+peach.src = "images/fun/catchher.png";
+peach.style = "width:150px; position:absolute; top:0px; "
+peach.style.left = Math.random() * 90 + "%";
+peach.style.animation = "3s 1 normal fall";
+peach.style.animationTimingFunction = "ease-in";
+document.body.overflow = "clip";
+peach.onanimationend = function(e){
+if(peach.class != "paused"){peach.remove(); document.body.overflow = "";}
+}
+
+peach.onclick = function(e){
+
+if(got==true){return}
+got=true;
+    peach.style.webkitAnimationPlayState='paused';
+    peach.style.mozAnimationPlayState='paused';
+    peach.style.animationPlayState='paused';
+
+txt = document.createElement('b');
+txt.innerText = "GREAT!";
+txt.style.position = "absolute"
+txt.style.left = peach.style.left;
+txt.style.top = peach.offsetTop;
+txt.style.display="block";
+txt.style.zIndex=100; txt.style.color = "lime"
+txt.style.fontSize="40px";
+txt.style.textShadow = "black 6px 6px 6px";
+
+document.body.appendChild(txt);
+
+yeah.play();
+yeah.onended = function(e){peach.remove(); txt.remove(); }
+}
+
+
+document.body.append(peach);
+}
+
+document.onkeydown = function(e){
+const allcheat = "catchher"
+var key = e.key.toLowerCase();
+if(key == allcheat[code.length]){ code += key; }else{code = ""; }
+if(code == allcheat ){ makePeachFall(); }
+}
+</script>
