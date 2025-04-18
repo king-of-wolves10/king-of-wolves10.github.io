@@ -7,6 +7,28 @@ nav{ color: white; }
   border-image-outset: 45px; background-color:#dfb483;
   overflow-y:scroll; height:70%
 }
+
+#grad { background:linear-gradient(skyblue,skyblue,skyblue,skyblue,#91e1b4,#8bd967,#61b165); }
+.sublink { padding-left:60px; background-color:#00000035; width:100%; text-align: left; }
+.maplink { width:100%; text-align: left;
+  padding-left: 30px; display: inline flow-root list-item;}
+
+.sublink a, .maplink a{color:aqua;}
+.sublink a:visited, .maplink a:visited {color:white;}
+.sidebar {
+
+float: right;
+  width: 300px;
+  background-image: linear-gradient(180deg, #e1ab0a,#7d3b00);
+  z-index: 20; min-height:800px;
+  border: double silver;
+
+}
+
+.sidebar a{color:link}
+.outerLink{color:aqua;}
+.outerLink:visited {color:purple;}
+
 body{
     background-color: #10093a; color:white;
     text-align:center;
@@ -28,10 +50,9 @@ width:100%
 #skip { width: 0;  color: transparent; }
 #skip:focus { width: unset;  color: yellow;   }
 
-.link , #mainnav , #skip{transform:rotateX(180deg);}
+
 .link {
 display: inline-block;
-	height: 50%;
 	width:max-content;
     text-align: center;
     align-content: center;
@@ -53,16 +74,17 @@ display: inline-block;
 
 article {
   position: relative; padding-bottom:20px;
-  min-height: calc(100vh - 100px);
-  
+  min-height: 1000px;   width: calc(100% - 360px);
+  overflow-x:clip;
 }
 
 
 #welcome{
+     position: absolute;
      background: -webkit-linear-gradient(#ff8100, #ff8100, #a95a00, #ff8100, #ff8100, #a95a00, #a95a00, #a95a00, #000000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-color: red;
+    -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 0.25px;
 }
 

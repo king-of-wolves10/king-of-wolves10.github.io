@@ -1,14 +1,15 @@
+
 links = [ 
 {"title":"Home", href:"index"},
 {"title":"Guilds Game", href:"pages/GuildGame"}, 
 {"title":"How to make your own website", href:"pages/makeOwn"}, 
 {"title":"About Me", href:"pages/aboutme"  },
 {"title":"Games", href:"pages/games/index" },
-
+{"title":"Fun stuff", href:"pages/fun" },
 
 
 ]
-var root = "/"
+var root = "/" //Ok so this might look stupid, but it makes sense when you make a page on your desktop
 
 var list = ""
 for(i=0; i<links.length; i++){
@@ -21,7 +22,8 @@ document.write(`
       <header>
 	<div style="display: flex;    overflow: hidden; "><a><img id="logo" style="height:128px"src="`+ root + `logo2.png"></img></a>
 	<div style='display:inline-block; width: 80%;'>
-    <h1 id="Welcome">King of Wolves website! </h1><br>
+    
+    <div id="grad" style="width:100%;"><h1 id="Welcome">King of Wolves website! </h1><img src="`+ root +`characters.png" style="height:300px; position:relative; left:35%;"></img></div>
     <nav id="mainnav"> <a href="#wrapper" id="skip">Skip Navigation</a> `+list+`
      </nav>
 </div>
