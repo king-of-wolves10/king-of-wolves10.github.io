@@ -42,6 +42,16 @@ Full map <hr color=white>
 <div style="width:80%; align-content: center; height:300px; display: inline-block; color:black;">
 <b>Blog</b>
 <div style="overflow-y:scroll; width:110%; height:70%" class="scroll">
+May 24th 2024
+I've been running in circles deciding when is the time to finish anything.<br>
+That time is always never. Have fun exploring the new page though.
+<br><br>
+I'm trying to learn how to make Windows games with Direct3D11 to have complete freedom
+compared to Godot Game Engine. It will also make a good future for me knowing DirectX with C++.
+<br><br>
+I thank you, Chuck Walbourn for not only answering my question on stackoverflow, but guiding me
+in the right path to making videogames.
+<hr>
 
 I hope y'all like the new layout. I thought a sidebar would be good for displaying links.
 Also, there's a new game on the horizon; It's not very fun, but it should be neat.<br>
