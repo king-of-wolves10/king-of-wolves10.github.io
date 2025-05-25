@@ -1,12 +1,69 @@
 * { margin: 0; padding: 0 }
-a { color: gold;}
+a { color: gold; text-decoration: underline;}
 nav{ color: white; }
+.scroll {
+
+  border-image: url('scroll.png') 130 / 45px stretch;
+  border-image-outset: 45px; background-color:#dfb483;
+  overflow-y:scroll; height:70%
+}
+
+#grad { background:linear-gradient(skyblue,skyblue,skyblue,skyblue,#91e1b4,#8bd967,#61b165); }
+.sublink { padding-left:60px; background-color:#00000035; width:100%; text-align: left; }
+.maplink { width:100%; text-align: left;
+  padding-left: 30px; display: inline flow-root list-item;}
+
+.sublink a, .maplink a{color:aqua;}
+.sublink a:visited, .maplink a:visited {color:white;}
+.sidebar {
+
+float: right;
+  width: 25%;
+  background-image: linear-gradient(180deg, #e1ab0a,#7d3b00);
+  z-index: 20; min-height:800px;
+  border: double silver;
+
+}
+
+.sidebar a{color:link}
+.outerLink{color:aqua;}
+.outerLink:visited {color:purple;}
+
 body{
     background-color: #10093a; color:white;
     text-align:center;
 }
+code{
+width:80;   height:80;
+  display: inline-block;
+  overflow: scroll;
+  resize:both; background-color:white; color:black; border:thin black;
+  overflow:auto; 
+}
+button {padding:10px}
+#mainnav{
+overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+width:100%
+}
+#skip { width: 0;  color: transparent; }
+#skip:focus { width: unset;  color: yellow;   }
 
-.border {s
+
+.link {
+display: inline-block;
+	width:max-content;
+    text-align: center;
+    align-content: center;
+  padding: 6;
+  background-color: #1235;
+  margin: 5;
+  border-style: groove;
+  border-color: #fffc #fff5 #fff9;
+}
+
+.border {
     border-left-color: white;
     border-top-color: silver;
     border-bottom-color: black;
@@ -16,16 +73,18 @@ body{
 }
 
 article {
-padding-bottom:100;
-position: relative;
+  position: relative; padding-bottom:20px;
+  min-height: 1000px;   width: calc(100% - 26%);
+  overflow-x:clip;
 }
 
 
 #welcome{
+     position: absolute;
      background: -webkit-linear-gradient(#ff8100, #ff8100, #a95a00, #ff8100, #ff8100, #a95a00, #a95a00, #a95a00, #000000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-color: red;
+    -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 0.25px;
 }
 
@@ -70,11 +129,12 @@ header{
 
 #footer{
     text-align: left;
-    height: 100px;
+    padding-bottom: 20;
     background-image: linear-gradient(171deg, #a30000, #471b05);
     border-top-color: #8c1030;
     border-top-style: solid;
     border-top-width: 10px;
     width: 100%;
+}
 }
 
