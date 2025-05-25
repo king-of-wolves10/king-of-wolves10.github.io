@@ -1,0 +1,508 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../generic.css">
+<link rel="icon" href="../favicon.ico">
+<title>My Art - king_of_wolves10</title>
+
+<style>
+
+@keyframes flip {
+  0% {
+	content-visibility:hidden;
+	background-image:url(images/bookflip.png);
+  }
+  99%{ content-visibility:hidden; }
+  100% {
+    content-visibility:visible;
+	background-image:url(images/bookpage.png);
+  }
+}
+
+@media (max-width: 500px) {
+  .sidebar {
+    display: none;
+    width:300px;
+  }
+  article {
+   width: calc(100%);
+   }
+}
+
+.page img{
+width: 100%;
+border:solid 3px transparent;
+}
+
+.page img:hover{
+border:solid 3px gold;
+}
+
+.pagenumber {
+position: absolute;
+  bottom: 20%;
+  left: 50%;
+}
+.page {
+width: 40%;
+position: relative;
+  height: 60%;
+  display: inline-block;
+  overflow: hidden;
+  text-align: left;
+  color: black;
+  background-size: 200% 100%;
+  background-image: url(images/bookpage.png);
+  padding-top: 15%;
+  padding-bottom: 15%;
+
+
+}
+.lp {
+  padding-left: 4%;
+  padding-right: 2%;
+}
+
+.rp {
+    padding-left: 2%;
+  background-position:right;
+  padding-right: 4%;
+}
+
+.book{
+display: block ruby;
+
+  width: 95%;
+  max-width:800px;
+  overflow-x: scroll;
+  aspect-ratio: 5/4;
+
+}
+
+.book a{
+color:royalblue;
+}
+
+.book a:hover{
+color:black;
+}
+
+.book>a:visited{
+color:slateblue;
+}
+
+.photo {
+display: flex;
+  flex-direction: column;
+  height: max-content;
+  align-items: center;
+  justify-content: center;
+background-color:#ffffffa1;
+}
+
+
+
+.pagewrapper {
+
+width:100%;
+height:100%;
+}
+
+.border{
+background-image: linear-gradient(0deg, #000000a1, #020069a1);
+}
+
+.nostyle{background-color:unset; border:none; color:unset;}
+.nostyle td{background-color:unset; border:none; color:unset;}
+.nostyle tr{background-color:unset; border:none; color:unset;}
+</style>
+</head>
+
+
+<body>
+
+
+<script src="../buildheader.js"></script>
+
+
+<noscript>
+
+
+<header>
+	<div style="display: flex;    overflow: hidden; "><a><img id="logo" alt="KingofWolves10" style="height:128px" src="../logo2.png"></a>
+	<div style="display:inline-block; width: 80%;">
+<div id="grad" style="width:100%;"><h1 id="Welcome">King of Wolves website! </h1><img src="../characters.png" style="height:300px; position:relative; left:35%;"></img></div>
+    <nav id="mainnav"> <a href="#wrapper" id="skip">Skip Navigation</a> 
+
+<a href="../index.html"><div class="link">Home</div></a>
+<a href="GuildGame.html"><div class="link">Guilds Game</div></a>
+<a href="makeOwn.html"><div class="link">How to make your own website</div></a>
+<a href="aboutme.html"><div class="link">About Me</div></a>
+<a href="games/index.html"><div class="link">Games</div></a>
+<a href="fun.html"><div class="link">Fun Stuff</div></a>
+     </nav>
+</div>
+This website uses JavaScript to build the header so the links can be updated across all pages quickly.
+If you can, please enable JavaScript to ensure complete navigation and functionality.
+</div>
+
+  </header>
+
+
+</noscript>
+
+<div id="wrapper">
+<div class="sidebar"></div>
+
+<article>
+<div id="artbook" class="book">
+
+<div name="page0" class="pagewrapper">
+	<div class="lp page" style="background-image:url(images/bookcover.png); color:gold; text-align:center">
+	<font size=4>king_of_wolves10</font><br><font size=8>Art Book</font><br>
+	</div>
+
+</div>
+
+<div name="page1" class="pagewrapper">
+	<div class="lp page" style="background-image:url(images/bookPageless.png)">
+
+	</div>
+	<div class="rp page">
+
+	</div>
+</div>
+
+<div name="page2" class="pagewrapper">
+	<div class="lp page" style="text-align:center;">
+	<h3>Note:<br>
+	Most images on the page are low quality to load quickly.<br>
+        To view the original high quality version, click the image.
+        </h3>
+	</div>
+	<div class="rp page">
+        <h3>Table of Contents</h3>
+        <a onclick="jumpto(3)">Original Drawings....................1</a><br>
+        <a onclick="jumpto(8)">Pokémon Drawings.................11</a><br>
+        <a onclick="jumpto(11)">Digimon Drawings.................17</a><br>
+        <a onclick="jumpto(13)">Neopets Drawings..................21</a><br>
+	</div>
+</div>
+
+<div name="page3" class="pagewrapper">
+	<div class="lp page">
+        
+        <div class="photo">
+           <a href="images/artbook/free dragon.png" target="_blank">
+           <img src="images/artbook/free dragon_Preview.jpg" />
+           </a><br>
+        <i>Free Dragon</i>
+	</div>
+
+	</div>
+	<div class="rp page" >
+	<center><h2>Chapter 1</h2><p>Original Drawings</p><br></center>
+	I made this picture while talking about
+        How to Train your Dragon after watchiing it. I think it captures the feelings I have
+        about the movie, and about dragons in general.
+
+	<span class="pagenumber">1</span>
+	</div>
+</div>
+
+<div name="page4" class="pagewrapper">
+	<div class="lp page">
+        
+        Since I was making this picture while talking, I made a couple of versions to show off
+        as the conversation went.
+
+        <div class="photo">
+           <a href="images/artbook/freeDragonV1.png" target="_blank">
+           <img src="images/artbook/freeDragonV1.png" />
+           </a><br>
+           <i>First version</i>
+	</div>
+        <span class="pagenumber">2</span>
+	</div>
+
+	<div class="rp page" >
+        <div class="photo">
+           <a href="images/artbook/freeDragonV2.png" target="_blank">
+           <img src="images/artbook/freeDragonV2.png" />
+           </a><br>
+           <i>Now with a background and less devilish colors</i>
+           <a href="images/artbook/freeDragonV3.png" target="_blank">
+           <img src="images/artbook/freeDragonV3.png" />
+           </a>
+           <i>Color revision</i>
+	</div>
+	</div>
+</div>
+
+<div name="page5" class="pagewrapper">
+
+	<div class="lp page" >
+        <div class="photo">
+           <a href="images/artbook/freeDragonV4.png" target="_blank">
+           <img src="images/artbook/freeDragonV4.png" />
+           </a><i>Slight color revision</i><br>
+           <i>Now with a background and less devilish colors</i>
+	</div>
+	<span class="pagenumber">4</span>
+	</div>
+
+	<div class="rp page" >
+        <div class="photo">
+           <a href="images/artbook/freeDragonV5.png" target="_blank">
+           <img src="images/artbook/freeDragonV5.png" />
+           </a><br>
+           <i>Added iris, unlike the final version, this one has blue eyes.</i>
+	</div>
+	<span class="pagenumber">5</span>
+	</div>
+
+</div>
+
+<div name="page6" class="pagewrapper">
+	<div class="lp page">
+        
+        <div class="photo">
+           <a href="images/artbook/meanwhile.png" target="_blank">
+           <img src="images/artbook/meanwhile_Preview.jpg" />
+           </a><br>
+        <i>Meanwhile</i>
+	</div>
+	<span class="pagenumber">6</span>
+	</div>
+	<div class="rp page" >
+        This is actually based on a real experience. Me and my bro
+        for a while would get a case of Yoohoo drinks and we'd put a
+        can in the <b>Deep Freezer</b> to make them cold quickly.<br><br>
+        This backfired when I forgot about a can I left there <b>all day</b>
+	<span class="pagenumber">7</span>
+	</div>
+</div>
+
+<div name="page7" class="pagewrapper">
+	<div class="lp page">
+        
+        <div class="photo">
+           <a href="images/fun/yoohoo.png" target="_blank">
+           <img src="images/fun/yoohoo.png" />
+           </a><br>
+        <i>Unfrosted Edition</i>
+
+	</div>
+
+	</div>
+	<div class="rp page" >
+	An error with both the frosted and unfrosted version, is that
+        the words <i>Chocolate Drink</i> should be brown instead of blue
+	<span class="pagenumber">9</span>
+	</div>
+</div>
+
+
+<div name="page8" class="pagewrapper">
+	<div class="lp page">
+        
+        <div class="photo">
+           <a href="images/artbook/charizard rush.png" target="_blank">
+           <img src="images/artbook/charizard rush.png" />
+           </a><br>
+        <i>Drawing my feelings</i>
+	</div>
+	<span class="pagenumber">10</span>
+	</div>
+	
+	<div class="rp page" >
+        <center><h2>Chapter 2</h2><p>Pokémon Drawings</p><br></center>
+	I was drawing how I felt that very moment. Except I didn't bother
+        spending too much time on it, or shading him. A doodle if anything.
+	<span class="pagenumber">11</span>
+	</div>
+</div>
+
+<div name="page9" class="pagewrapper">
+	<div class="lp page">
+        
+        <div class="photo">
+           <a href="images/artbook/charizard rice.png" target="_blank">
+           <img src="images/artbook/charizard rice_Preview.jpg" />
+           </a><br>
+        <i>Charizard with a ricecake</i>
+	</div>
+	<span class="pagenumber">12</span>
+	</div>
+
+	<div class="rp page" >
+	I was in a conversation with friends who were all drawing, so I made
+        some drawings too, and I wanted a funny Charizard.
+	<span class="pagenumber">13</span>
+	</div>
+</div>
+
+<div name="page10" class="pagewrapper">
+	<div class="lp page">
+        
+        <div class="photo" style="flex-flow: wrap;">
+           <a href="images/artbook/Pikabutter.png"  style="width:45% " target="_blank">
+           <img src="images/artbook/Pikabutter_Preview.jpg"/>
+           </a>
+           <a href="images/artbook/Piplup Snowman.png" style="width:45%; padding-left:5px " target="_blank">
+           <img src="images/artbook/Piplup Snowman_Preview.jpg" />
+           </a>
+	<br>
+        <i>Pikabutter</i> & <i>Piplup snowman</i>
+	</div>
+	<span class="pagenumber">14</span>
+	</div>
+
+	<div class="rp page" >
+	These were made in Gartic Phone. They were all submissions from my friends.
+        Piplup can still be seen with that cross face baseline.
+	<span class="pagenumber">15</span>
+	</div>
+</div>
+
+
+<div name="page11" class="pagewrapper">
+	<div class="lp page">
+        
+        <div class="photo" style="flex-flow: wrap;">
+           <a href="images/artbook/rad flamedramon.jpg"  style="width:45% " target="_blank">
+           <img src="images/artbook/rad flamedramon_Preview.jpg"/>
+           </a>
+           <a href="images/artbook/flamedramon head.jpg" style="width:45%; padding-left:5px " target="_blank">
+           <img src="images/artbook/flamedramon head_Preview.jpg" />
+           </a>
+	<br>
+        <i>Rad Flamedramon</i>
+	</div>
+	<span class="pagenumber">16</span>
+	</div>
+
+	<div class="rp page" >
+	<center><h2>Chapter 3</h2><p>Digimon Drawings</p><br></center>
+	I was surfing the web for pictures other people made. Then I saw a
+        Colored Pencil drawing of Flamedramon that inspired me. I think Flamedramon
+        has to be one of, if not the raddest Digimon around. This was actually a
+        picture to test how well the colors would work, and I'd make a bigger one later, but then I got carried away.
+        Unfortunetly, a tiny critter walked on the page and bled when I squished it, and it stained too.
+	<span class="pagenumber">17</span>
+	</div>
+
+
+</div>
+
+<div name="page12" class="pagewrapper">
+	<div class="lp page">
+        
+        <div class="photo">
+           <a href="images/artbook/Armadillomon spread.jpg" target="_blank">
+           <img src="images/artbook/Armadillomon spread_Preview.jpg" />
+           </a><br>
+        <i>Armidillomon spread</i>
+	</div>
+	<span class="pagenumber">18</span>
+	</div>
+	<div class="rp page" >
+
+	Armidillomon is one of my favorite Digimon, so I thought I'd draw him
+        doing one of my most favorite things. Spreading out on the bed relaxing.
+        It's totally in his character to do so.<br>
+        <i>Fun Fact:</i> I sometimes mispronounce Armadillo as "Armadilla"
+	<span class="pagenumber">19</span>
+	</div>
+</div>
+
+<div name="page13" class="pagewrapper">
+	<div class="lp page">
+        <div class="photo">
+           <a href="images/artbook/Joclaw relaxing.jpg" target="_blank">
+           <img src="images/artbook/Joclaw relaxing_Preview.jpg" />
+           </a><br>
+        <i>Joclaw relaxing</i>
+	</div>
+	<span class="pagenumber">20</span>
+	</div>
+	<div class="rp page" >
+	<center><h2>Chapter 4</h2><p>Neopets Drawings</p><br></center>
+        Joclaw_35 on a normal day. So calm, hardly saying any words, as he
+        doesn't need to, with eyes that big can display any emotion well enough.
+        Joclaw can be seen admiring the nature around him, sitting atop a tree
+        that has lived exactly as long as his ancestors. (Perhaps you can call it
+        a family tree) I drew this photo for a friend who likes dragons as much as I do.
+	<span class="pagenumber">21</span>
+	</div>
+</div>
+
+<div name="page14" class="pagewrapper">
+	<div class="lp page">
+        <div class="photo">
+           <a href="images/artbook/Lunar new year.jpg" target="_blank">
+           <img src="images/artbook/Lunar new year_Preview.jpg" />
+           </a><br>
+        <i>Lunar new year: Year of the snake</i>
+	</div>
+	<span class="pagenumber">22</span>
+	</div>
+	<div class="rp page" >
+        Joclaw_35 celebrates the Lunar new year with Draconik_269 as the
+        year passes from the year of the wood dragon, to the year of the snake.
+        Draconik is actually named after a neopian friend daikonik, who helped create him,
+        and suggested a photo be created after the Lunar new year. (and also likes dragons)
+	<span class="pagenumber">23</span>
+	</div>
+</div>
+
+
+<div name="page15" class="pagewrapper">
+	<div class="lp page">
+        <div class="photo">
+           <a href="images/artbook/intimidating rufus.jpg" target="_blank">
+           <img src="images/artbook/intimidating rufus_Preview.jpg" />
+           </a><br>
+        <i>KnightWolf_6_6_6 intimidating.</i>
+	</div>
+	<span class="pagenumber">24</span>
+	</div>
+	<div class="rp page" >
+        Yes, I know about how unforuntate the username is. I picked it a long time ago to be
+        "edgy" or something like that; Besides that, this is just a nice doodle.
+	<span class="pagenumber">25</span>
+	</div>
+</div>
+
+<div name="page16" class="pagewrapper">
+	<div class="lp page">
+        I've made more drawings than this, but I'd need to collect digital photos of them all.
+	<br><br>
+        <i>Farewell for now</i>
+	</div>
+	<div class="rp page" style="background-image:url(images/bookPageless.png)" >
+	</div>
+</div>
+
+</div>
+
+<button onclick="flip(-1); ">Last Page</button> <button onclick="flip(1);">Next Page</button>
+
+
+<script src="bookscript.js"></script>
+
+</article>
+</div>
+
+<div id="footer">
+<span>Contact me, via: </span><a href="https://www.neopets.com/neomessages.phtml?type=send&amp;recipient=king_of_wolves10">Neomail</a>
+<script src="../botprevention.js"></script><br><br>
+<script src="../buildfooter.js"></script>
+<br>
+
+</div>
+
+
+
+
+</body></html>
+
