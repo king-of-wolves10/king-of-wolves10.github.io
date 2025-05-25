@@ -7,6 +7,9 @@ hand = new Image; hand.src = 'maze_assets/hand.png';
 zombGFX = new Image; zombGFX.src = 'maze_assets/zombie.png';
 ctrls = new Image; ctrls.src = "maze_assets/controls.png";
 
+STARTcell = 3358;
+ENDcell = 252
+
 pauseStart = new Date();
 var playerSpeed = 0;
 
@@ -73,6 +76,10 @@ player = {
 x:83, y:40, z:0, a:270,
 hp:10, zx:0
 }
+
+
+
+
 playerName = ""
 zombies = [
 
@@ -80,9 +87,11 @@ zombies = [
 hp:10, zx:0}
 ]
 
-player.x *= mapscale; player.y *= mapscale;
+player.x = Math.ceil(STARTcell % mapsize) * mapscale
+player.y = Math.ceil(STARTcell / mapsize) * mapscale
 player.x -= mapscale / 2
 player.y -= mapscale / 2
+
 lastX = player.x;
 lastY = player.y;
 
@@ -254,11 +263,38 @@ cc.fillText(splash[currentSplash],0,0);
 cc.restore();
 
 cc.font = '18px seven'
-drawButton("Play Game",HW,HH,"Game");
+if(paused == false){
+drawButton("Play Game",HW,HH,"chooseMode");
+}else{
+drawButton("Resume",HW,HH,"Game");
+}
 
 drawButton("Help & Options",HW,HH + 90,"Options");
 }
+else if( screen=="chooseMode" ){
+cc.drawImage(dirtWall,0,0);
+drawButton("Play My Maze",HW,HH,"ResetMaze");
+drawButton("Play Random Maze",HW,HH + 40,"RandomGame");
+drawButton("Set Seed",HW,HH + 80,"TypeSeed");
+}else if( screen=="RandomGame" ){
+generateRandomMaze()
+screen = "Game";
+}else if( screen=="TypeSeed" ){
+seed = Number(prompt("insert a seed number here") )
+if(seed == undefined || seed >= 0 == false ){ seed = Math.random() * 4294967295  }
+screen = "chooseMode";
+}
+else if( screen=="ResetMaze" ){
+for(i=0; i<backupMaze.length; i++){
+map[i] = backupMaze[i]
+}
+STARTcell = 3358;
+ENDcell = 252
+reset();
 
+screen = "Game"
+
+}
 else if( screen=="Options" ){
 
 cc.drawImage(dirtWall,0,0);
@@ -431,7 +467,7 @@ if(winTiles > 1){ screen = "Title"; reset(); alert("Sneaky sneaky, I know you di
 window.location.reload()
 
  }
-if(map[252] != 3){ screen = "Title"; reset(); alert("Sneaky sneaky, I know you didn't actually win :P "); 
+if(map[ENDcell] != 3){ screen = "Title"; reset(); alert("Sneaky sneaky, I know you didn't actually win :P "); 
 
 window.location.reload()
  }

@@ -125,12 +125,16 @@ cc.drawImage(hand,453, 353  + player.zx);
 }
 
 /* secreet map screen
-cc.fillStyle="yellow";
+
 for(i=0; i<map.length; i++){
 
+cc.fillStyle="yellow";
+if(map[i] == 3){ cc.fillStyle="white"}
 if(map[i] != 0){
 cc.fillRect( (i % mapsize) * mapscale,Math.floor(i / mapsize) * mapscale,mapscale,mapscale );
 }
+
+
 }
 cc.fillStyle="red";
 for(a=0; a<viewingblocks.length; a++){
@@ -139,14 +143,13 @@ var b = viewingblocks[a];
 cc.fillRect( (b % mapsize) * mapscale,Math.floor(b / mapsize) * mapscale,mapscale,mapscale );
 
 }
-
+*/
 
 cc.fillRect( player.x - mapscale / 2,player.y - mapscale / 2,mapscale,mapscale );
-*/
 
 
 playerSpeed = Math.abs( (player.x - lastX) + (player.y - lastY) );
-if( playerSpeed > 80 ){ reset(); alert("Sneaky sneaky, I know you teleported "); }
+//if( playerSpeed > 80 ){ reset(); alert("Sneaky sneaky, I know you teleported "); }
 
 }
 trophy = undefined
