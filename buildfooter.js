@@ -2,9 +2,10 @@
 var subpages = {
 
 "Games":[ {title:"Fetch", href:"Fetch" }, {title:"My Minecraft Maze", href:"MinecraftMaze" }, ],
-"About Me":[ {title:"Minecraft PS3", href:"minecraft"} ]
+"About Me":[ {title:"Minecraft PS3", href:"minecraft"},{title:"My art", href:"art"} ]
 
 }
+
 
 var list = ""
 for(i=0; i<links.length; i++){
