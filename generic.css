@@ -81,7 +81,7 @@ display: inline-block;
     border-width: 5px;
     border-style: solid;
 }
-
+wrapper{ overflow-x:clip; }
 article {
   position: relative; padding-bottom:20px;
   min-height: 1000px;   width: calc(100% - 26%);
