@@ -42,7 +42,14 @@ Full map <hr color=white>
 <div style="width:80%; align-content: center; height:300px; display: inline-block; color:black;">
 <b>Blog</b>
 <div style="overflow-y:scroll; width:110%; height:70%" class="scroll">
-May 24th 2024
+June 28 2025<br>
+Is my website really a year old? Time does fly!!<br>
+I've been busy trying to finish a game called Popeye for 2 players, it will play
+exactly the same as the classic game (minus a few kinks), except another player has
+to control Bluto/Brutus. I hope it will be done soon, once it is, you'll be able to
+download it here. (Ooh an executable)
+<hr>
+May 24th 2024<br>
 I've been running in circles deciding when is the time to finish anything.<br>
 That time is always never. Have fun exploring the new page though.
 <br><br>
