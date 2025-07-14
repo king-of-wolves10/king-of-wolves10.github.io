@@ -42,6 +42,10 @@ Full map <hr color=white>
 <div style="width:80%; align-content: center; height:300px; display: inline-block; color:black;">
 <b>Blog</b>
 <div style="overflow-y:scroll; width:110%; height:70%" class="scroll">
+July 29 2025<br>
+About that Popeye game.. I forgot that I wanted to make a copyright free version
+of that &lt;('=' )\
+<hr>
 June 28 2025<br>
 Is my website really a year old? Time does fly!!<br>
 I've been busy trying to finish a game called Popeye for 2 players, it will play
