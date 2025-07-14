@@ -16,7 +16,7 @@ nav{ color: white; }
 .sublink a, .maplink a{color:aqua;}
 .sublink a:visited, .maplink a:visited {color:white;}
 .sidebar {
-
+overflow-x: clip;
 float: right;
   width: 25%;
   background-image: linear-gradient(180deg, #e1ab0a,#7d3b00);
