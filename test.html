@@ -1,7 +1,5 @@
 <iframe id="gamewindow" width="480" height="360"></iframe>
 
-<script src="swfobject.js"></script>
-<script>
-var el = document.getElementById("gamewindow");
-swfobject.embedSWF("Mario Flash 1 Ver.E Deluxe.swf", el, 480, 360, 10);
-</script>
+<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+<script >swfobject.embedSWF("Mario Flash 1 Ver.E Deluxe.swf", 'ruffle', 480, 320);</script>
+
